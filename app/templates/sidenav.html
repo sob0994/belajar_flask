@@ -1,0 +1,106 @@
+<div class="sidenav">
+  <div class="menu">
+    <i class="bx bx-menu"></i>
+  </div>
+  <div class="brand">
+    <i class="bx bx-layer"></i>
+    <span class="title">DobleBoyler</span>
+  </div>
+  <ul class="nav">
+    <li>
+      <a href="/" class="nav_item">
+        <i class="bx bxs-home"></i>
+        <span class="nav_link">Home</span>
+      </a>
+      <ul class="subnav">
+        <span class="subnav_title">Home</span>
+      </ul>
+    </li>
+
+    <li>
+      <div class="nav_item">
+        <i class="bx bxs-grid"></i>
+        <span class="nav_link">Formulir</span>
+        <i class="bx bx-chevron-down arrow"></i>
+      </div>
+      <ul class="subnav">
+        <span class="subnav_title">Formulir</span>
+        <li>
+          <a href="##" class="subnav_link">Permohonan</a>
+        </li>
+        <li>
+          <a href="###" class="subnav_link">Pendaftaran</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="nav_item">
+        <i class="bx bxs-chart"></i>
+        <span class="nav_link">Laporan</span>
+        <i class="bx bx-chevron-down arrow"></i>
+      </div>
+      <ul class="subnav">
+        <span class="subnav_title">Laporan</span>
+        <li>
+          <a href="##" class="subnav_link">Bulanan</a>
+        </li>
+        <li>
+          <a href="###" class="subnav_link">Laporan Tahunan Baru Sekali</a>
+        </li>
+        <li>
+          <a href="###" class="subnav_link">Laporan Tahunan Baru Sekali</a>
+        </li>
+        <li>
+          <a href="###" class="subnav_link">Laporan Tahunan Baru Sekali</a>
+        </li>
+        <li>
+          <a href="###" class="subnav_link">Laporan Tahunan Baru Sekali</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="nav_item">
+        <i class="bx bxs-cog"></i>
+        <span class="nav_link">Settings</span>
+        <i class="bx bx-chevron-down arrow"></i>
+      </div>
+      <ul class="subnav">
+        <span class="subnav_title">Setitngs</span>
+        <li>
+          <a href="##" class="subnav_link">Profil</a>
+        </li>
+        <li>
+          <a href="###" class="subnav_link">Set-Up</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<script>
+  // Open and Close Menu
+  const sideMenu = document.querySelector(".menu");
+  const sidenav = document.querySelector(".sidenav");
+  sideMenu.addEventListener("click", () => {
+    sidenav.classList.toggle("close");
+    removeActiveSubnav();
+  });
+  // Open and Close DropDown
+  const sidenavItem = document.querySelectorAll(".nav_item");
+  sidenavItem.forEach((item) => {
+    if (item.lastElementChild.classList.contains("arrow")) {
+      item.addEventListener("click", () => {
+        if (!sidenav.classList.contains("close"))
+          item.parentElement.classList.toggle("active");
+      });
+    }
+  });
+  // Function
+  const removeActiveSubnav = () => {
+    sidenavItem.forEach((item) => {
+      item.parentElement.classList.remove("active");
+    });
+  };
+</script>

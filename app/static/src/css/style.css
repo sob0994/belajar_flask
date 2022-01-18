@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+:root {
+  --color1: rgb(27, 16, 34);
+  --color1Hover: rgb(89, 66, 102);
+  --color2: rgb(64, 47, 73);
+  --text1: rgb(194, 194, 194);
+}
+
+input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--text1);
+  border-radius: 10px;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sidenav {
+  position: absolute;
+  height: 100vh;
+  width: 200px;
+  background-color: var(--color1);
+  transition: all 0.5s ease;
+  z-index: 50;
+}
+
+.sidenav .brand {
+  padding: 6px 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  height: 50px;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.5s ease;
+}
+
+.sidenav .menu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 169px;
+  font-size: 1.2rem;
+  color: white;
+  padding: 12px 6px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sidenav .menu i {
+  transform: rotate(90deg);
+  transition: all 0.5s ease;
+}
+
+.sidenav .brand i {
+  font-size: 1.3rem;
+}
+
+.sidenav .brand .title {
+  margin-left: 1rem;
+}
+
+.sidenav.close {
+  width: 40px;
+  transition: all 0.5s ease;
+}
+
+.sidenav.close .menu {
+  left: 0;
+  width: 40px;
+  transition: all 0.5s ease;
+}
+
+.sidenav.close .menu i {
+  transform: rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.sidenav.close .brand {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.sidenav .nav {
+  margin-top: 20px;
+  max-height: calc(100vh - 90px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidenav .nav li.active {
+  background-color: var(--color1Hover);
+}
+
+.sidenav .nav li {
+  list-style: none;
+  transition: all 0.5s ease;
+}
+
+.sidenav .nav .nav_item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 12px;
+  transition: all 0.5s ease;
+}
+.sidenav .nav .nav_item:hover {
+  background-color: var(--color1Hover);
+  transition: all 0.5s ease;
+}
+
+.sidenav .nav .nav_item .nav_link {
+  margin-left: 20px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidenav.close .nav .nav_item .nav_link {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidenav .nav .nav_item .arrow {
+  margin-left: auto;
+  transition: all 0.5s ease;
+}
+.sidenav.close .nav .nav_item .arrow {
+  display: none;
+}
+
+.sidenav.close .nav .subnav {
+  transition: none;
+}
+.sidenav .nav .subnav {
+  background-color: var(--color2);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 200px;
+  transition: all 0.5s ease;
+}
+
+.sidenav.close .nav li.active .subnav {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.sidenav .nav li.active .subnav {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.sidenav .nav li.active .nav_item .arrow {
+  transform: rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.sidenav .nav li:hover {
+  background-color: var(--color1Hover);
+  transition: all 0.5s ease;
+}
+
+.sidenav .nav .subnav .subnav_link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  min-height: 40px;
+  font-size: smaller;
+  padding: 10px 10px 10px 45px;
+}
+.sidenav.close .nav .subnav .subnav_link {
+  padding: 10px 20px;
+}
+
+.sidenav .nav .subnav .subnav_title {
+  display: none;
+  height: 40px;
+  padding: 10px;
+  color: var(--text1);
+  background-color: var(--color1Hover);
+}
+.sidenav.close .nav .subnav .subnav_title {
+  display: block;
+}
+
+.sidenav.close .nav .subnav {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+
+.sidenav.close .nav li:hover .subnav {
+  opacity: 1;
+  pointer-events: auto;
+  left: 40px;
+  overflow: auto;
+  pointer-events: auto;
+  display: block;
+  transition: all 0.5s ease;
+  white-space: nowrap;
+}
+
+.content {
+  transition: all 0.5s ease;
+  position: absolute;
+  margin-left: 200px;
+  overflow: auto;
+  height: 100vh;
+  padding: 10px;
+  z-index: -1;
+}
+.sidenav.close ~ .content {
+  margin-left: 40px;
+  transition: all 0.5s ease;
+}
+.sidenav.close ~ .topnav {
+  padding-left: 40px;
+  transition: all 0.5s ease;
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 600px) {
+}

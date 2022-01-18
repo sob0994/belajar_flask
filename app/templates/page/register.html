@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BoxIcons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Animate -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Formulir Registrasi</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Source Sans Pro", sans-serif;
+      }
+      :root {
+        --color1: rgb(0, 140, 196);
+        --color1-20: rgb(231, 248, 255);
+        --color1-50: rgb(73, 167, 204);
+        --color2: gray;
+        --color2-20: rgb(240, 240, 240);
+        --color2-50: rgb(187, 187, 187);
+        --color3: rgb(255, 47, 47);
+        --trans: all 0.5s ease;
+      }
+      button,
+      input {
+        border: none;
+      }
+
+      button,
+      input:focus {
+        outline: none;
+      }
+      .box {
+        /* box-sizing: border-box; */
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+      }
+      .box .content {
+        width: 300px;
+        /* background-color: aqua; */
+      }
+      .box .content .header {
+        /* width: 100%; */
+        margin-top: 50px;
+        padding: 10px;
+        color: var(--color1);
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .box .content .header i {
+        font-size: 5rem;
+        margin-top: 1rem;
+        /* margin-bottom: -2rem; */
+      }
+      .box .content .body {
+        padding: 10px;
+      }
+      .box .content .footer {
+        padding: 10px;
+        padding-bottom: 20px;
+      }
+      .input_group {
+        width: 100%;
+        margin-top: 0.8rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .input_group label {
+        color: var(--color1);
+        width: 100%;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .input_group input {
+        background-color: var(--color2-20);
+        padding: 10px;
+        margin-top: 0.4rem;
+        /* width: 100%; */
+        color: var(--color2);
+      }
+
+      .input_group input::placeholder {
+        color: var(--color2-50);
+      }
+
+      .btn {
+        padding: 10px;
+        background-color: var(--color1-50);
+        color: white;
+        width: 100%;
+      }
+      .btn:hover {
+        background-color: var(--color1);
+        cursor: pointer;
+      }
+
+      .msg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        width: 100%;
+        height: 30px;
+        opacity: 1;
+      }
+      .msg.error {
+        border: 1px solid rgb(255, 133, 133);
+        background-color: rgb(255, 226, 226);
+        color: var(--color3);
+      }
+
+      .hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.8 ease;
+        transition-delay: 6s;
+        height: 0;
+      }
+
+      .input_group.error input {
+        border: solid 1px var(--color3);
+        color: var(--color3);
+      }
+      .input_group.error input::placeholder {
+        color: var(--color3);
+      }
+
+      .input_group .status {
+        margin-top: 5px;
+        color: var(--color3);
+        font-size: 0.8rem;
+        opacity: 0;
+        transition: var(--trans);
+      }
+      .input_group.error .status {
+        opacity: 1;
+        transition: var(--trans);
+      }
+      .footer .register {
+        font-size: 0.8rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        color: var(--color2);
+      }
+      .footer .register a {
+        text-decoration: none;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="content">
+        <div class="header animate__animated animate__fadeInDown">
+          <span>Formulir <strong>Registrasi</strong></span>
+          <i class="bx bx-user"></i>
+        </div>
+        <div class="body">
+          {% with msgs = get_flashed_messages(with_categories=true) %} {% for
+          category, message in msgs %}
+          <div class="msg {{category}}">
+            <span>{{message}}</span>
+          </div>
+          {% endfor %} {% endwith %}
+          <form id="form_register" method="post">
+            <div class="input_group animate__animated animate__fadeInDown">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                autocomplete="off"
+                autocapitalize="off"
+                required
+                id="username"
+                name="username"
+                placeholder="Masukkan username..."
+              />
+              <p class="status" id="msg_username"></p>
+            </div>
+            <div class="input_group animate__animated animate__fadeInDown">
+              <label for="namaLengkap">Nama Lengkap</label>
+              <input
+                type="text"
+                autocomplete="off"
+                autocapitalize="off"
+                required
+                id="namaLengkap"
+                name="namaLengkap"
+                placeholder="Masukkan Nama Lengkap..."
+              />
+              <p class="status" id="msg_namaLengkap"></p>
+            </div>
+            <div class="input_group animate__animated animate__fadeInDown">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                autocomplete="off"
+                autocapitalize="off"
+                required
+                id="email"
+                name="email"
+                placeholder="Masukkan email..."
+              />
+              <p class="status" id="msg_email"></p>
+            </div>
+            <div class="input_group animate__animated animate__fadeInDown">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Masukkan password..."
+              />
+              <p class="status" id="msg_password"></p>
+            </div>
+            <div class="input_group animate__animated animate__fadeInDown">
+              <label for="rePassword">Re-Password</label>
+              <input
+                type="password"
+                id="rePassword"
+                name="rePassword"
+                required
+                placeholder="Masukkan password sekali lagi..."
+              />
+              <p class="status" id="msg_rePassword"></p>
+            </div>
+          </form>
+        </div>
+        <div class="footer animate__animated animate__fadeInDown">
+          <button id="login" class="btn" type="submit">Register</button>
+          <span class="register"
+            >Sudah punya akun ?
+            <a id="gotoLogin" href="/login"> Sign In</a></span
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Hide Flash massage
+    setTimeout(() => {
+      let msg = document.querySelector(".msg");
+      if (msg) {
+        if (!msg.classList.contains("hide")) msg.classList.add("hide");
+      }
+      // Session Check
+      let session = getSession();
+
+      if (session) {
+        document.forms["form_register"].username.value = session.username || "";
+        document.forms["form_register"].namaLengkap.value =
+          session.namaLengkap || "";
+        document.forms["form_register"].email.value = session.email || "";
+        document.forms["form_register"].password.value = session.password || "";
+        document.forms["form_register"].rePassword.value =
+          session.rePassword || "";
+
+        addStatus(session.errors, "username", session.errors.username);
+        addStatus(session.errors, "email", session.errors.email);
+      }
+    }, 100);
+    // Button on Click
+    const btnLogin = document.querySelector("#login");
+    btnLogin.addEventListener("click", () => {
+      const data = {
+        username: document.forms["form_register"].username.value || "",
+        namaLengkap: document.forms["form_register"].namaLengkap.value || "",
+        email: document.forms["form_register"].email.value || "",
+        password: document.forms["form_register"].password.value || "",
+        rePassword: document.forms["form_register"].rePassword.value || "",
+      };
+
+      const errors = valid(data);
+
+      addStatus(errors, "username", errors.username);
+      addStatus(errors, "namaLengkap", errors.namaLengkap);
+      addStatus(errors, "email", errors.email);
+      addStatus(errors, "password", errors.password);
+      addStatus(errors, "rePassword", errors.rePassword);
+      if (Object.keys(errors).length === 0) {
+        console.log(document.forms["form_register"].username);
+        document.getElementById("form_register").submit();
+      }
+    });
+
+    // Function helpers Start=================================================
+    const valid = (data) => {
+      let error = {};
+      if (!data.username || data.username === "")
+        error.username = "Username wajib diisi";
+      if (!data.namaLengkap || data.namaLengkap === "")
+        error.namaLengkap = "Nama Lengkap wajib diisi";
+      if (!data.email || data.email === "") error.email = "Email wajib diisi";
+      if (!data.password || data.password === "")
+        error.password = "Password wajib diisi";
+      if (!data.rePassword || data.rePassword === "")
+        error.rePassword = "re Password wajib diisi";
+      if (data.password !== data.rePassword)
+        error.rePassword = "Password tidak sama, silahkan dicek";
+
+      return error;
+    };
+
+    const addStatus = (errors, name, msg) => {
+      if (errors?.[name]) {
+        document
+          .getElementById(`msg_${name}`)
+          .parentElement.classList.add("error");
+        document.getElementById(`msg_${name}`).innerHTML = msg;
+      } else {
+        document
+          .getElementById(`msg_${name}`)
+          .parentElement.classList.remove("error");
+        document.getElementById(`msg_${name}`).innerHTML = "";
+      }
+    };
+
+    const getSession=()=>{
+      let session={};
+      {% if session.get("register") %}
+        session = {{session.register|tojson}}
+      {% endif %}
+      return session
+    };
+    // Function helpers End=================================================
+  </script>
+</html>
