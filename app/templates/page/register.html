@@ -9,11 +9,6 @@
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!-- Animate -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <title>Formulir Registrasi</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
@@ -171,7 +166,7 @@
   <body>
     <div class="box">
       <div class="content">
-        <div class="header animate__animated animate__fadeInDown">
+        <div class="header">
           <span>Formulir <strong>Registrasi</strong></span>
           <i class="bx bx-user"></i>
         </div>
@@ -183,7 +178,7 @@
           </div>
           {% endfor %} {% endwith %}
           <form id="form_register" method="post">
-            <div class="input_group animate__animated animate__fadeInDown">
+            <div class="input_group">
               <label for="username">Username</label>
               <input
                 type="text"
@@ -196,7 +191,7 @@
               />
               <p class="status" id="msg_username"></p>
             </div>
-            <div class="input_group animate__animated animate__fadeInDown">
+            <div class="input_group">
               <label for="namaLengkap">Nama Lengkap</label>
               <input
                 type="text"
@@ -209,7 +204,7 @@
               />
               <p class="status" id="msg_namaLengkap"></p>
             </div>
-            <div class="input_group animate__animated animate__fadeInDown">
+            <div class="input_group">
               <label for="email">Email</label>
               <input
                 type="text"
@@ -222,7 +217,7 @@
               />
               <p class="status" id="msg_email"></p>
             </div>
-            <div class="input_group animate__animated animate__fadeInDown">
+            <div class="input_group">
               <label for="password">Password</label>
               <input
                 type="password"
@@ -233,7 +228,7 @@
               />
               <p class="status" id="msg_password"></p>
             </div>
-            <div class="input_group animate__animated animate__fadeInDown">
+            <div class="input_group">
               <label for="rePassword">Re-Password</label>
               <input
                 type="password"
@@ -246,7 +241,7 @@
             </div>
           </form>
         </div>
-        <div class="footer animate__animated animate__fadeInDown">
+        <div class="footer">
           <button id="login" class="btn" type="submit">Register</button>
           <span class="register"
             >Sudah punya akun ?

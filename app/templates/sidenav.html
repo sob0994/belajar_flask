@@ -1,4 +1,4 @@
-<div class="sidenav">
+<div class="sidenav close">
   <div class="menu">
     <i class="bx bx-menu"></i>
   </div>
@@ -6,9 +6,9 @@
     <i class="bx bx-layer"></i>
     <span class="title">DobleBoyler</span>
   </div>
-  <ul class="nav">
+  <ul class="mynav">
     <li>
-      <a href="/" class="nav_item">
+      <a href="/" class="mynav_item">
         <i class="bx bxs-home"></i>
         <span class="nav_link">Home</span>
       </a>
@@ -18,7 +18,7 @@
     </li>
 
     <li>
-      <div class="nav_item">
+      <div class="mynav_item">
         <i class="bx bxs-grid"></i>
         <span class="nav_link">Formulir</span>
         <i class="bx bx-chevron-down arrow"></i>
@@ -26,7 +26,7 @@
       <ul class="subnav">
         <span class="subnav_title">Formulir</span>
         <li>
-          <a href="##" class="subnav_link">Permohonan</a>
+          <a href="/nasabah" class="subnav_link">Register Nasabah</a>
         </li>
         <li>
           <a href="###" class="subnav_link">Pendaftaran</a>
@@ -35,7 +35,7 @@
     </li>
 
     <li>
-      <div class="nav_item">
+      <div class="mynav_item">
         <i class="bx bxs-chart"></i>
         <span class="nav_link">Laporan</span>
         <i class="bx bx-chevron-down arrow"></i>
@@ -61,7 +61,7 @@
     </li>
 
     <li>
-      <div class="nav_item">
+      <div class="mynav_item">
         <i class="bx bxs-cog"></i>
         <span class="nav_link">Settings</span>
         <i class="bx bx-chevron-down arrow"></i>
@@ -69,7 +69,7 @@
       <ul class="subnav">
         <span class="subnav_title">Setitngs</span>
         <li>
-          <a href="##" class="subnav_link">Profil</a>
+          <a href="/data/provinsi" class="subnav_link">Data Provinsi</a>
         </li>
         <li>
           <a href="###" class="subnav_link">Set-Up</a>
@@ -88,7 +88,7 @@
     removeActiveSubnav();
   });
   // Open and Close DropDown
-  const sidenavItem = document.querySelectorAll(".nav_item");
+  const sidenavItem = document.querySelectorAll(".mynav_item");
   sidenavItem.forEach((item) => {
     if (item.lastElementChild.classList.contains("arrow")) {
       item.addEventListener("click", () => {

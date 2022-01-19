@@ -106,23 +106,24 @@ body {
   transition: all 0.5s ease;
 }
 
-.sidenav .nav {
+.sidenav .mynav {
   margin-top: 20px;
   max-height: calc(100vh - 90px);
   overflow-x: hidden;
   overflow-y: auto;
+  padding-left: 0px;
 }
 
-.sidenav .nav li.active {
+.sidenav .mynav li.active {
   background-color: var(--color1Hover);
 }
 
-.sidenav .nav li {
+.sidenav .mynav li {
   list-style: none;
   transition: all 0.5s ease;
 }
 
-.sidenav .nav .nav_item {
+.sidenav .mynav .mynav_item {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -133,66 +134,67 @@ body {
   padding: 10px 12px;
   transition: all 0.5s ease;
 }
-.sidenav .nav .nav_item:hover {
+.sidenav .mynav .mynav_item:hover {
   background-color: var(--color1Hover);
   transition: all 0.5s ease;
 }
 
-.sidenav .nav .nav_item .nav_link {
+.sidenav .mynav .mynav_item .nav_link {
   margin-left: 20px;
   opacity: 1;
   pointer-events: auto;
 }
-.sidenav.close .nav .nav_item .nav_link {
+.sidenav.close .mynav .mynav_item .nav_link {
   opacity: 0;
   pointer-events: none;
 }
 
-.sidenav .nav .nav_item .arrow {
+.sidenav .mynav .mynav_item .arrow {
   margin-left: auto;
   transition: all 0.5s ease;
 }
-.sidenav.close .nav .nav_item .arrow {
+.sidenav.close .mynav .mynav_item .arrow {
   display: none;
 }
 
-.sidenav.close .nav .subnav {
+.sidenav.close .mynav .subnav {
   transition: none;
 }
-.sidenav .nav .subnav {
+.sidenav .mynav .subnav {
   background-color: var(--color2);
   opacity: 0;
   pointer-events: none;
   position: absolute;
   width: 200px;
   transition: all 0.5s ease;
+  padding-left: 0;
 }
 
-.sidenav.close .nav li.active .subnav {
+.sidenav.close .mynav li.active .subnav {
   position: absolute;
   opacity: 0;
   pointer-events: none;
   transition: all 0.5s ease;
 }
 
-.sidenav .nav li.active .subnav {
+.sidenav .mynav li.active .subnav {
   opacity: 1;
   pointer-events: auto;
   position: relative;
   transition: all 0.5s ease;
 }
 
-.sidenav .nav li.active .nav_item .arrow {
+.sidenav .mynav li.active .mynav_item .arrow {
   transform: rotate(180deg);
   transition: all 0.5s ease;
 }
 
-.sidenav .nav li:hover {
+.sidenav .mynav li:hover {
   background-color: var(--color1Hover);
   transition: all 0.5s ease;
 }
 
-.sidenav .nav .subnav .subnav_link {
+.sidenav .mynav .subnav .subnav_link {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -203,22 +205,22 @@ body {
   font-size: smaller;
   padding: 10px 10px 10px 45px;
 }
-.sidenav.close .nav .subnav .subnav_link {
+.sidenav.close .mynav .subnav .subnav_link {
   padding: 10px 20px;
 }
 
-.sidenav .nav .subnav .subnav_title {
+.sidenav .mynav .subnav .subnav_title {
   display: none;
   height: 40px;
   padding: 10px;
   color: var(--text1);
   background-color: var(--color1Hover);
 }
-.sidenav.close .nav .subnav .subnav_title {
+.sidenav.close .mynav .subnav .subnav_title {
   display: block;
 }
 
-.sidenav.close .nav .subnav {
+.sidenav.close .mynav .subnav {
   position: absolute;
   left: 50px;
   top: 0;
@@ -228,7 +230,7 @@ body {
   display: block;
 }
 
-.sidenav.close .nav li:hover .subnav {
+.sidenav.close .mynav li:hover .subnav {
   opacity: 1;
   pointer-events: auto;
   left: 40px;
@@ -246,11 +248,13 @@ body {
   overflow: auto;
   height: 100vh;
   padding: 10px;
-  z-index: -1;
+  z-index: 0;
+  width: calc(100% - 200px);
 }
 .sidenav.close ~ .content {
   margin-left: 40px;
   transition: all 0.5s ease;
+  width: calc(100% - 40px);
 }
 .sidenav.close ~ .topnav {
   padding-left: 40px;
@@ -259,4 +263,7 @@ body {
 
 /* Mobile Devices */
 @media only screen and (max-width: 600px) {
+  .content .mybox {
+    margin-bottom: 9rem;
+  }
 }

@@ -9,11 +9,6 @@
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!-- Animate -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <title>Silahkan Login</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
@@ -99,13 +94,13 @@
         color: var(--color2-50);
       }
 
-      .btn {
+      .mybtn {
         padding: 10px;
         background-color: var(--color1-50);
         color: white;
         width: 100%;
       }
-      .btn:hover {
+      .mybtn:hover {
         background-color: var(--color1);
         cursor: pointer;
       }
@@ -157,7 +152,7 @@
         opacity: 1;
         transition: var(--trans);
       }
-      .footer .register {
+      .footer .myregister {
         font-size: 0.8rem;
         width: 100%;
         display: flex;
@@ -165,7 +160,7 @@
         margin-top: 10px;
         color: var(--color2);
       }
-      .footer .register a {
+      .footer .myregister a {
         text-decoration: none;
         margin-left: 5px;
       }
@@ -174,7 +169,7 @@
   <body>
     <div class="box">
       <div class="content">
-        <div class="header animate__animated animate__fadeInDown">
+        <div class="header">
           <span>Silahkan <strong>Login</strong></span>
           <i class="bx bxs-lock"></i>
         </div>
@@ -186,7 +181,7 @@
           </div>
           {% endfor %} {% endwith %}
           <form id="form_login" method="post">
-            <div class="input_group animate__animated animate__fadeInDown">
+            <div class="input_group">
               <label for="username">Username</label>
               <input
                 type="text"
@@ -199,7 +194,7 @@
               />
               <p class="status" id="msg_username"></p>
             </div>
-            <div class="input_group animate__animated animate__fadeInDown">
+            <div class="input_group">
               <label for="password">Password</label>
               <input
                 type="password"
@@ -213,15 +208,9 @@
           </form>
         </div>
         <div class="footer">
-          <button
-            id="login"
-            class="btn animate__animated animate__fadeInDown"
-            type="submit"
-          >
-            Login
-          </button>
-          <span class="register animate__animated animate__fadeInDown"
-            >Belum punya akun ? <a href="/register"> Buat Akun</a></span
+          <button id="login" class="mybtn" type="submit">Login</button>
+          <span class="myregister"
+            >Belum punya akun ? <a href="/register"> Buat Akun </a></span
           >
         </div>
       </div>

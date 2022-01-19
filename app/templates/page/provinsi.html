@@ -1,0 +1,90 @@
+{% set title = 'Formulir Pendaftaran Nasabah'%} {% extends 'base.html' %} {%
+block content %}
+<style>
+  @import url("https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css");
+  .dataTables_scrollBody {
+    max-height: calc(100vh - 200px) !important;
+  }
+  .mybtn {
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+  .btn-green-o {
+    background-color: rgb(231, 255, 231);
+    color: rgb(0, 102, 0);
+    border: solid 1px rgb(132, 255, 132);
+  }
+  .btn-green-o:hover {
+    background-color: rgb(179, 255, 179);
+  }
+  .btn-red-o {
+    background-color: rgb(255, 231, 231);
+    color: rgb(150, 0, 0);
+    border: solid 1px rgb(255, 132, 132);
+  }
+  .btn-red-o:hover {
+    background-color: rgb(255, 179, 179);
+  }
+  .btn-blue-o {
+    background-color: rgb(231, 241, 255);
+    color: rgb(0, 53, 102);
+    border: solid 1px rgb(84, 172, 255);
+  }
+  .btn-blue-o:hover {
+    background-color: rgb(179, 212, 255);
+  }
+</style>
+<div class="row" style="margin-bottom: 100px">
+  <div class="col"></div>
+  <div class="col-12 col-md-6">
+    <table
+      id="example"
+      class="table table-sm table-striped"
+      style="width: 100%; font-size: small"
+    >
+      <thead>
+        <tr>
+          <th>Kode</th>
+          <th>Provinsi</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for itm in provinsi %}
+        <tr>
+          <td>{{itm.Kode}}</td>
+          <td>{{itm.Provinsi}}</td>
+          <td>
+            <a href="/{{ itm.id }}" class="mybtn btn-blue-o">Edit</a>
+            <a href="/{{ itm.id }}" class="mybtn btn-red-o">Hapus</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Kode</th>
+          <th>Provinsi</th>
+          <th></th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="col"></div>
+</div>
+<script src="{{url_for('static',filename='src/js/jquery-3.5.1.js')}}"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#example").DataTable({
+      paging: false,
+      info: false,
+      scrollY: 300,
+      scrollCollapse: true,
+    });
+  });
+</script>
+{% endblock %}

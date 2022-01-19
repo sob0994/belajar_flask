@@ -1,0 +1,1014 @@
+[
+  {
+    "No": "1",
+    "Provinsi": "Aceh (NAD)",
+    "Kode": "11",
+    "Kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Aceh Barat", "Kode": "11.05" },
+      {
+        "NO": "2",
+        "Kab": "Kab.",
+        "Nama": "Aceh Barat Daya",
+        "Kode": "11.12"
+      },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Aceh Besar", "Kode": "11.06" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Aceh Jaya", "Kode": "11.14" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Aceh Selatan", "Kode": "11.01" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Aceh Singkil", "Kode": "11.10" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Aceh Tamiang", "Kode": "11.16" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Aceh Tengah", "Kode": "11.04" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Aceh Tenggara", "Kode": "11.02" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Aceh Timur", "Kode": "11.03" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Aceh Utara", "Kode": "11.08" },
+      { "NO": "12", "Kab": "Kota", "Nama": "Banda Aceh", "Kode": "11.71" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Bener Meriah", "Kode": "11.17" },
+      { "NO": "14", "Kab": "Kab.", "Nama": "Bireuen", "Kode": "11.11" },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Gayo Lues", "Kode": "11.13" },
+      { "NO": "16", "Kab": "Kota", "Nama": "Langsa", "Kode": "11.74" },
+      { "NO": "17", "Kab": "Kota", "Nama": "Lhokseumawe", "Kode": "11.73" },
+      { "NO": "18", "Kab": "Kab.", "Nama": "Nagan Raya", "Kode": "11.15" },
+      { "NO": "19", "Kab": "Kab.", "Nama": "Pidie", "Kode": "11.07" },
+      { "NO": "20", "Kab": "Kab.", "Nama": "Pidie Jaya", "Kode": "11.18" },
+      { "NO": "21", "Kab": "Kota", "Nama": "Sabang", "Kode": "11.72" },
+      { "NO": "22", "Kab": "Kab.", "Nama": "Simeulue", "Kode": "11.09" },
+      { "NO": "23", "Kab": "Kota", "Nama": "Subulussalam", "Kode": "11.75" }
+    ]
+  },
+  {
+    "No": "2",
+    "Provinsi": "Bali",
+    "Kode": "51",
+    "Kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Badung", "Kode": "51.03" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Bangli", "Kode": "51.06" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Buleleng", "Kode": "51.08" },
+      { "NO": "4", "Kab": "Kota", "Nama": "Denpasar", "Kode": "51.71" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Gianyar", "Kode": "51.04" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Jembrana", "Kode": "51.01" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Karangasem", "Kode": "51.07" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Klungkung", "Kode": "51.05" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Tabanan", "Kode": "51.02" }
+    ]
+  },
+  {
+    "No": "3",
+    "Provinsi": "Banten",
+    "Kode": "36",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Cilegon", "Kode": "36.72" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Lebak", "Kode": "36.02" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Pandeglang", "Kode": "36.01" },
+      { "NO": "4", "Kab": "Kota", "Nama": "Serang", "Kode": "36.73" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Serang", "Kode": "36.04" },
+      { "NO": "6", "Kab": "Kota", "Nama": "Tangerang", "Kode": "36.71" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Tangerang", "Kode": "36.03" },
+      { "NO": "8", "Kab": "Kota", "Nama": "Tangerang Selatan", "Kode": "36.74" }
+    ]
+  },
+  {
+    "No": "4",
+    "Provinsi": "Bengkulu",
+    "Kode": "17",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Bengkulu", "Kode": "17.71" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Bengkulu Selatan", "Kode": "17.01" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Bengkulu Tengah", "Kode": "17.09" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Bengkulu Utara", "Kode": "17.03" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Kaur", "Kode": "17.04" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Kepahiang", "Kode": "17.08" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Lebong", "Kode": "17.07" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Muko Muko", "Kode": "17.06" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Rejang Lebong", "Kode": "17.02" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Seluma", "Kode": "17.05" }
+    ]
+  },
+  {
+    "No": "5",
+    "Provinsi": "DI Yogyakarta",
+    "Kode": "34",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Bantul", "Kode": "34.02" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Gunung Kidul", "Kode": "34.03" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Kulon Progo", "Kode": "34.01" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Sleman", "Kode": "34.04" },
+      { "NO": "5", "Kab": "Kota", "Nama": "Yogyakarta", "Kode": "34.71" }
+    ]
+  },
+  {
+    "No": "6",
+    "Provinsi": "DKI Jakarta",
+    "Kode": "31",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Jakarta Barat", "Kode": "31.73" },
+      { "NO": "2", "Kab": "Kota", "Nama": "Jakarta Pusat", "Kode": "31.71" },
+      { "NO": "3", "Kab": "Kota", "Nama": "Jakarta Selatan", "Kode": "31.74" },
+      { "NO": "4", "Kab": "Kota", "Nama": "Jakarta Timur", "Kode": "31.75" },
+      { "NO": "5", "Kab": "Kota", "Nama": "Jakarta Utara", "Kode": "31.72" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Kepulauan Seribu", "Kode": "31.01" }
+    ]
+  },
+  {
+    "No": "7",
+    "Provinsi": "Gorontalo",
+    "Kode": "75",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Boalemo", "Kode": "75.02" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Bone Bolango", "Kode": "75.03" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Gorontalo", "Kode": "75.01" },
+      { "NO": "4", "Kab": "Kota", "Nama": "Gorontalo", "Kode": "75.71" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Gorontalo Utara", "Kode": "75.05" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Pohuwato", "Kode": "75.04" }
+    ]
+  },
+  {
+    "No": "8",
+    "Provinsi": "Jambi",
+    "Kode": "15",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Batang Hari", "Kode": "15.04" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Bungo", "Kode": "15.08" },
+      { "NO": "3", "Kab": "Kota", "Nama": "Jambi", "Kode": "15.71" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Kerinci", "Kode": "15.01" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Merangin", "Kode": "15.02" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Muaro Jambi", "Kode": "15.05" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Sarolangun", "Kode": "15.03" },
+      { "NO": "8", "Kab": "Kota", "Nama": "Sungaipenuh", "Kode": "15.72" },
+      {
+        "NO": "9",
+        "Kab": "Kab.",
+        "Nama": "Tanjung Jabung Barat",
+        "Kode": "15.06"
+      },
+      {
+        "NO": "10",
+        "Kab": "Kab.",
+        "Nama": "Tanjung Jabung Timur",
+        "Kode": "15.07"
+      },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Tebo", "Kode": "15.09" }
+    ]
+  },
+  {
+    "No": "9",
+    "Provinsi": "Jawa Barat",
+    "Kode": "32",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Bandung", "Kode": "32.73" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Bandung", "Kode": "32.04" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Bandung Barat", "Kode": "32.17" },
+      { "NO": "4", "Kab": "Kota", "Nama": "Banjar", "Kode": "32.79" },
+      { "NO": "5", "Kab": "Kota", "Nama": "Bekasi", "Kode": "32.75" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Bekasi", "Kode": "32.16" },
+      { "NO": "7", "Kab": "Kota", "Nama": "Bogor", "Kode": "32.71" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Bogor", "Kode": "32.01" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Ciamis", "Kode": "32.07" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Cianjur", "Kode": "32.03" },
+      { "NO": "11", "Kab": "Kota", "Nama": "Cimahi", "Kode": "32.77" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Cirebon", "Kode": "32.09" },
+      { "NO": "13", "Kab": "Kota", "Nama": "Cirebon", "Kode": "32.74" },
+      { "NO": "14", "Kab": "Kota", "Nama": "Depok", "Kode": "32.76" },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Garut", "Kode": "32.05" },
+      { "NO": "16", "Kab": "Kab.", "Nama": "Indramayu", "Kode": "32.12" },
+      { "NO": "17", "Kab": "Kab.", "Nama": "Karawang", "Kode": "32.15" },
+      { "NO": "18", "Kab": "Kab.", "Nama": "Kuningan", "Kode": "32.08" },
+      { "NO": "19", "Kab": "Kab.", "Nama": "Majalengka", "Kode": "32.10" },
+      { "NO": "20", "Kab": "Kab.", "Nama": "Pangandaran", "Kode": "32.18" },
+      { "NO": "21", "Kab": "Kab.", "Nama": "Purwakarta", "Kode": "32.14" },
+      { "NO": "22", "Kab": "Kab.", "Nama": "Subang", "Kode": "32.13" },
+      { "NO": "23", "Kab": "Kab.", "Nama": "Sukabumi", "Kode": "32.02" },
+      { "NO": "24", "Kab": "Kota", "Nama": "Sukabumi", "Kode": "32.72" },
+      { "NO": "25", "Kab": "Kab.", "Nama": "Sumedang", "Kode": "32.11" },
+      { "NO": "26", "Kab": "Kota", "Nama": "Tasikmalaya", "Kode": "32.78" },
+      { "NO": "27", "Kab": "Kab.", "Nama": "Tasikmalaya", "Kode": "32.06" }
+    ]
+  },
+  {
+    "No": "10",
+    "Provinsi": "Jawa Tengah",
+    "Kode": "33",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Banjarnegara", "Kode": "33.04" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Banyumas", "Kode": "33.02" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Batang", "Kode": "33.25" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Blora", "Kode": "33.16" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Boyolali", "Kode": "33.09" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Brebes", "Kode": "33.29" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Cilacap", "Kode": "33.01" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Demak", "Kode": "33.21" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Grobogan", "Kode": "33.15" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Jepara", "Kode": "33.20" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Karanganyar", "Kode": "33.13" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Kebumen", "Kode": "33.05" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Kendal", "Kode": "33.24" },
+      { "NO": "14", "Kab": "Kab.", "Nama": "Klaten", "Kode": "33.10" },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Kudus", "Kode": "33.19" },
+      { "NO": "16", "Kab": "Kab.", "Nama": "Magelang", "Kode": "33.08" },
+      { "NO": "17", "Kab": "Kota", "Nama": "Magelang", "Kode": "33.71" },
+      { "NO": "18", "Kab": "Kab.", "Nama": "Pati", "Kode": "33.18" },
+      { "NO": "19", "Kab": "Kota", "Nama": "Pekalongan", "Kode": "33.75" },
+      { "NO": "20", "Kab": "Kab.", "Nama": "Pekalongan", "Kode": "33.26" },
+      { "NO": "21", "Kab": "Kab.", "Nama": "Pemalang", "Kode": "33.27" },
+      { "NO": "22", "Kab": "Kab.", "Nama": "Purbalingga", "Kode": "33.03" },
+      { "NO": "23", "Kab": "Kab.", "Nama": "Purworejo", "Kode": "33.06" },
+      { "NO": "24", "Kab": "Kab.", "Nama": "Rembang", "Kode": "33.17" },
+      { "NO": "25", "Kab": "Kota", "Nama": "Salatiga", "Kode": "33.73" },
+      { "NO": "26", "Kab": "Kota", "Nama": "Semarang", "Kode": "33.74" },
+      { "NO": "27", "Kab": "Kab.", "Nama": "Semarang", "Kode": "33.22" },
+      { "NO": "28", "Kab": "Kab.", "Nama": "Sragen", "Kode": "33.14" },
+      { "NO": "29", "Kab": "Kab.", "Nama": "Sukoharjo", "Kode": "33.11" },
+      { "NO": "30", "Kab": "Kota", "Nama": "Surakarta", "Kode": "33.72" },
+      { "NO": "31", "Kab": "Kab.", "Nama": "Tegal", "Kode": "33.28" },
+      { "NO": "32", "Kab": "Kota", "Nama": "Tegal", "Kode": "33.76" },
+      { "NO": "33", "Kab": "Kab.", "Nama": "Temanggung", "Kode": "33.23" },
+      { "NO": "34", "Kab": "Kab.", "Nama": "Wonogiri", "Kode": "33.12" },
+      { "NO": "35", "Kab": "Kab.", "Nama": "Wonosobo", "Kode": "33.07" }
+    ]
+  },
+  {
+    "No": "11",
+    "Provinsi": "Jawa Timur",
+    "Kode": "35",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Bangkalan", "Kode": "35.26" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Banyuwangi", "Kode": "35.10" },
+      { "NO": "3", "Kab": "Kota", "Nama": "Batu", "Kode": "35.79" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Blitar", "Kode": "35.05" },
+      { "NO": "5", "Kab": "Kota", "Nama": "Blitar", "Kode": "35.72" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Bojonegoro", "Kode": "35.22" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Bondowoso", "Kode": "35.11" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Gresik", "Kode": "35.25" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Jember", "Kode": "35.09" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Jombang", "Kode": "35.17" },
+      { "NO": "11", "Kab": "Kota", "Nama": "Kediri", "Kode": "35.71" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Kediri", "Kode": "35.06" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Lamongan", "Kode": "35.24" },
+      { "NO": "14", "Kab": "Kab.", "Nama": "Lumajang", "Kode": "35.08" },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Madiun", "Kode": "35.19" },
+      { "NO": "16", "Kab": "Kota", "Nama": "Madiun", "Kode": "35.77" },
+      { "NO": "17", "Kab": "Kab.", "Nama": "Magetan", "Kode": "35.20" },
+      { "NO": "18", "Kab": "Kab.", "Nama": "Malang", "Kode": "35.07" },
+      { "NO": "19", "Kab": "Kota", "Nama": "Malang", "Kode": "35.73" },
+      { "NO": "20", "Kab": "Kab.", "Nama": "Mojokerto", "Kode": "35.16" },
+      { "NO": "21", "Kab": "Kota", "Nama": "Mojokerto", "Kode": "35.76" },
+      { "NO": "22", "Kab": "Kab.", "Nama": "Nganjuk", "Kode": "35.18" },
+      { "NO": "23", "Kab": "Kab.", "Nama": "Ngawi", "Kode": "35.21" },
+      { "NO": "24", "Kab": "Kab.", "Nama": "Pacitan", "Kode": "35.01" },
+      { "NO": "25", "Kab": "Kab.", "Nama": "Pamekasan", "Kode": "35.28" },
+      { "NO": "26", "Kab": "Kab.", "Nama": "Pasuruan", "Kode": "35.14" },
+      { "NO": "27", "Kab": "Kota", "Nama": "Pasuruan", "Kode": "35.75" },
+      { "NO": "28", "Kab": "Kab.", "Nama": "Ponorogo", "Kode": "35.02" },
+      { "NO": "29", "Kab": "Kota", "Nama": "Probolinggo", "Kode": "35.74" },
+      { "NO": "30", "Kab": "Kab.", "Nama": "Probolinggo", "Kode": "35.13" },
+      { "NO": "31", "Kab": "Kab.", "Nama": "Sampang", "Kode": "35.27" },
+      { "NO": "32", "Kab": "Kab.", "Nama": "Sidoarjo", "Kode": "35.15" },
+      { "NO": "33", "Kab": "Kab.", "Nama": "Situbondo", "Kode": "35.12" },
+      { "NO": "34", "Kab": "Kab.", "Nama": "Sumenep", "Kode": "35.29" },
+      { "NO": "35", "Kab": "Kota", "Nama": "Surabaya", "Kode": "35.78" },
+      { "NO": "36", "Kab": "Kab.", "Nama": "Trenggalek", "Kode": "35.03" },
+      { "NO": "37", "Kab": "Kab.", "Nama": "Tuban", "Kode": "35.23" },
+      { "NO": "38", "Kab": "Kab.", "Nama": "Tulungagung", "Kode": "35.04" }
+    ]
+  },
+  {
+    "No": "12",
+    "Provinsi": "Kalimantan Barat",
+    "Kode": "61",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Bengkayang", "Kode": "61.07" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Kapuas Hulu", "Kode": "61.06" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Kayong Utara", "Kode": "61.11" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Ketapang", "Kode": "61.04" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Kubu Raya", "Kode": "61.12" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Landak", "Kode": "61.08" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Melawi", "Kode": "61.10" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Mempawah", "Kode": "61.02" },
+      { "NO": "9", "Kab": "Kota", "Nama": "Pontianak", "Kode": "61.71" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Sambas", "Kode": "61.01" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Sanggau", "Kode": "61.03" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Sekadau", "Kode": "61.09" },
+      { "NO": "13", "Kab": "Kota", "Nama": "Singkawang", "Kode": "61.72" },
+      { "NO": "14", "Kab": "Kab.", "Nama": "Sintang", "Kode": "61.05" }
+    ]
+  },
+  {
+    "No": "13",
+    "Provinsi": "Kalimantan Selatan",
+    "Kode": "63",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Balangan", "Kode": "63.11" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Banjar", "Kode": "63.03" },
+      { "NO": "3", "Kab": "Kota", "Nama": "Banjarbaru", "Kode": "63.72" },
+      { "NO": "4", "Kab": "Kota", "Nama": "Banjarmasin", "Kode": "63.71" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Barito Kuala", "Kode": "63.04" },
+      {
+        "NO": "6",
+        "Kab": "Kab.",
+        "Nama": "Hulu Sungai Selatan",
+        "Kode": "63.06"
+      },
+      {
+        "NO": "7",
+        "Kab": "Kab.",
+        "Nama": "Hulu Sungai Tengah",
+        "Kode": "63.07"
+      },
+      {
+        "NO": "8",
+        "Kab": "Kab.",
+        "Nama": "Hulu Sungai Utara",
+        "Kode": "63.08"
+      },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Kotabaru", "Kode": "63.02" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Tabalong", "Kode": "63.09" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Tanah Bumbu", "Kode": "63.10" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Tanah Laut", "Kode": "63.01" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Tapin", "Kode": "63.05" }
+    ]
+  },
+  {
+    "No": "14",
+    "Provinsi": "Kalimantan Tengah",
+    "Kode": "62",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Barito Selatan", "Kode": "62.04" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Barito Timur", "Kode": "62.13" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Barito Utara", "Kode": "62.05" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Gunung Mas", "Kode": "62.10" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Kapuas", "Kode": "62.03" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Katingan", "Kode": "62.06" },
+      {
+        "NO": "7",
+        "Kab": "Kab.",
+        "Nama": "Kotawaringin Barat",
+        "Kode": "62.01"
+      },
+      {
+        "NO": "8",
+        "Kab": "Kab.",
+        "Nama": "Kotawaringin Timur",
+        "Kode": "62.02"
+      },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Lamandau", "Kode": "62.09" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Murung Raya", "Kode": "62.12" },
+      { "NO": "11", "Kab": "Kota", "Nama": "Palangka Raya", "Kode": "62.71" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Pulang Pisau", "Kode": "62.11" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Seruyan", "Kode": "62.07" },
+      { "NO": "14", "Kab": "Kab.", "Nama": "Sukamara", "Kode": "62.08" }
+    ]
+  },
+  {
+    "No": "15",
+    "Provinsi": "Kalimantan Timur",
+    "Kode": "64",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Balikpapan", "Kode": "64.71" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Berau", "Kode": "64.03" },
+      { "NO": "3", "Kab": "Kota", "Nama": "Bontang", "Kode": "64.74" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Kutai Barat", "Kode": "64.07" },
+      {
+        "NO": "5",
+        "Kab": "Kab.",
+        "Nama": "Kutai Kartanegara",
+        "Kode": "64.02"
+      },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Kutai Timur", "Kode": "64.08" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Mahakam Ulu", "Kode": "64.11" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Paser", "Kode": "64.01" },
+      {
+        "NO": "9",
+        "Kab": "Kab.",
+        "Nama": "Penajam Paser Utara",
+        "Kode": "64.09"
+      },
+      { "NO": "10", "Kab": "Kota", "Nama": "Samarinda", "Kode": "64.72" }
+    ]
+  },
+  {
+    "No": "16",
+    "Provinsi": "Kalimantan Utara",
+    "Kode": "65",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Bulungan", "Kode": "65.01" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Malinau", "Kode": "65.02" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Nunukan", "Kode": "65.03" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Tana Tidung", "Kode": "65.04" },
+      { "NO": "5", "Kab": "Kota", "Nama": "Tarakan", "Kode": "65.71" }
+    ]
+  },
+  {
+    "No": "17",
+    "Provinsi": "Kepulauan Bangka Belitung",
+    "Kode": "19",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Bangka", "Kode": "19.01" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Bangka Barat", "Kode": "19.05" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Bangka Selatan", "Kode": "19.03" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Bangka Tengah", "Kode": "19.04" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Belitung", "Kode": "19.02" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Belitung Timur", "Kode": "19.06" },
+      { "NO": "7", "Kab": "Kota", "Nama": "Pangkal Pinang", "Kode": "19.71" }
+    ]
+  },
+  {
+    "No": "18",
+    "Provinsi": "Kepulauan Riau",
+    "Kode": "21",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Batam", "Kode": "21.71" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Bintan", "Kode": "21.01" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Karimun", "Kode": "21.02" },
+      {
+        "NO": "4",
+        "Kab": "Kab.",
+        "Nama": "Kepulauan Anambas",
+        "Kode": "21.05"
+      },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Lingga", "Kode": "21.04" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Natuna", "Kode": "21.03" },
+      { "NO": "7", "Kab": "Kota", "Nama": "Tanjung Pinang", "Kode": "21.72" }
+    ]
+  },
+  {
+    "No": "19",
+    "Provinsi": "Lampung",
+    "Kode": "18",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Bandar Lampung", "Kode": "18.71" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Lampung Barat", "Kode": "18.04" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Lampung Selatan", "Kode": "18.01" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Lampung Tengah", "Kode": "18.02" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Lampung Timur", "Kode": "18.07" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Lampung Utara", "Kode": "18.03" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Mesuji", "Kode": "18.11" },
+      { "NO": "8", "Kab": "Kota", "Nama": "Metro", "Kode": "18.72" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Pesawaran", "Kode": "18.09" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Pesisir Barat", "Kode": "18.13" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Pringsewu", "Kode": "18.10" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Tanggamus", "Kode": "18.06" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Tulang Bawang", "Kode": "18.05" },
+      {
+        "NO": "14",
+        "Kab": "Kab.",
+        "Nama": "Tulang Bawang Barat",
+        "Kode": "18.12"
+      },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Way Kanan", "Kode": "18.08" }
+    ]
+  },
+  {
+    "No": "20",
+    "Provinsi": "Maluku",
+    "Kode": "81",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Ambon", "Kode": "81.71" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Buru", "Kode": "81.04" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Buru Selatan", "Kode": "81.09" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Kepulauan Aru", "Kode": "81.07" },
+      {
+        "NO": "5",
+        "Kab": "Kab.",
+        "Nama": "Kepulauan Tanimbar (Maluku Tenggara Barat)",
+        "Kode": "81.03"
+      },
+      {
+        "NO": "6",
+        "Kab": "Kab.",
+        "Nama": "Maluku Barat Daya",
+        "Kode": "81.08"
+      },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Maluku Tengah", "Kode": "81.01" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Maluku Tenggara", "Kode": "81.02" },
+      {
+        "NO": "9",
+        "Kab": "Kab.",
+        "Nama": "Seram Bagian Barat",
+        "Kode": "81.06"
+      },
+      {
+        "NO": "10",
+        "Kab": "Kab.",
+        "Nama": "Seram Bagian Timur",
+        "Kode": "81.05"
+      },
+      { "NO": "11", "Kab": "Kota", "Nama": "Tual", "Kode": "81.72" }
+    ]
+  },
+  {
+    "No": "21",
+    "Provinsi": "Maluku Utara",
+    "Kode": "82",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Halmahera Barat", "Kode": "82.01" },
+      {
+        "NO": "2",
+        "Kab": "Kab.",
+        "Nama": "Halmahera Selatan",
+        "Kode": "82.04"
+      },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Halmahera Tengah", "Kode": "82.02" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Halmahera Timur", "Kode": "82.06" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Halmahera Utara", "Kode": "82.03" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Kepulauan Sula", "Kode": "82.05" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Pulau Morotai", "Kode": "82.07" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Pulau Taliabu", "Kode": "82.08" },
+      { "NO": "9", "Kab": "Kota", "Nama": "Ternate", "Kode": "82.71" },
+      { "NO": "10", "Kab": "Kota", "Nama": "Tidore Kepulauan", "Kode": "82.72" }
+    ]
+  },
+  {
+    "No": "22",
+    "Provinsi": "Nusa Tenggara Barat (NTB)",
+    "Kode": "52",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Bima", "Kode": "52.06" },
+      { "NO": "2", "Kab": "Kota", "Nama": "Bima", "Kode": "52.72" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Dompu", "Kode": "52.05" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Lombok Barat", "Kode": "52.01" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Lombok Tengah", "Kode": "52.02" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Lombok Timur", "Kode": "52.03" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Lombok Utara", "Kode": "52.08" },
+      { "NO": "8", "Kab": "Kota", "Nama": "Mataram", "Kode": "52.71" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Sumbawa", "Kode": "52.04" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Sumbawa Barat", "Kode": "52.07" }
+    ]
+  },
+  {
+    "No": "23",
+    "Provinsi": "Nusa Tenggara Timur (NTT)",
+    "Kode": "53",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Alor", "Kode": "53.05" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Belu", "Kode": "53.04" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Ende", "Kode": "53.08" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Flores Timur", "Kode": "53.06" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Kupang", "Kode": "53.01" },
+      { "NO": "6", "Kab": "Kota", "Nama": "Kupang", "Kode": "53.71" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Lembata", "Kode": "53.13" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Malaka", "Kode": "53.21" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Manggarai", "Kode": "53.10" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Manggarai Barat", "Kode": "53.15" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Manggarai Timur", "Kode": "53.19" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Nagekeo", "Kode": "53.16" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Ngada", "Kode": "53.09" },
+      { "NO": "14", "Kab": "Kab.", "Nama": "Rote Ndao", "Kode": "53.14" },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Sabu Raijua", "Kode": "53.20" },
+      { "NO": "16", "Kab": "Kab.", "Nama": "Sikka", "Kode": "53.07" },
+      { "NO": "17", "Kab": "Kab.", "Nama": "Sumba Barat", "Kode": "53.12" },
+      {
+        "NO": "18",
+        "Kab": "Kab.",
+        "Nama": "Sumba Barat Daya",
+        "Kode": "53.18"
+      },
+      { "NO": "19", "Kab": "Kab.", "Nama": "Sumba Tengah", "Kode": "53.17" },
+      { "NO": "20", "Kab": "Kab.", "Nama": "Sumba Timur", "Kode": "53.11" },
+      {
+        "NO": "21",
+        "Kab": "Kab.",
+        "Nama": "Timor Tengah Selatan",
+        "Kode": "53.02"
+      },
+      {
+        "NO": "22",
+        "Kab": "Kab.",
+        "Nama": "Timor Tengah Utara",
+        "Kode": "53.03"
+      }
+    ]
+  },
+  {
+    "No": "24",
+    "Provinsi": "Papua",
+    "Kode": "91",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Asmat", "Kode": "91.18" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Biak Numfor", "Kode": "91.06" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Boven Digoel", "Kode": "91.16" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Deiyai", "Kode": "91.28" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Dogiyai", "Kode": "91.26" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Intan Jaya", "Kode": "91.27" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Jayapura", "Kode": "91.03" },
+      { "NO": "8", "Kab": "Kota", "Nama": "Jayapura", "Kode": "91.71" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Jayawijaya", "Kode": "91.02" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Keerom", "Kode": "91.11" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Kepulauan Yapen", "Kode": "91.05" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Lanny Jaya", "Kode": "91.23" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Mamberamo Raya", "Kode": "91.20" },
+      {
+        "NO": "14",
+        "Kab": "Kab.",
+        "Nama": "Mamberamo Tengah",
+        "Kode": "91.21"
+      },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Mappi", "Kode": "91.17" },
+      { "NO": "16", "Kab": "Kab.", "Nama": "Merauke", "Kode": "91.01" },
+      { "NO": "17", "Kab": "Kab.", "Nama": "Mimika", "Kode": "91.09" },
+      { "NO": "18", "Kab": "Kab.", "Nama": "Nabire", "Kode": "91.04" },
+      { "NO": "19", "Kab": "Kab.", "Nama": "Nduga", "Kode": "91.24" },
+      { "NO": "20", "Kab": "Kab.", "Nama": "Paniai", "Kode": "91.08" },
+      {
+        "NO": "21",
+        "Kab": "Kab.",
+        "Nama": "Pegunungan Bintang",
+        "Kode": "91.12"
+      },
+      { "NO": "22", "Kab": "Kab.", "Nama": "Puncak", "Kode": "91.25" },
+      { "NO": "23", "Kab": "Kab.", "Nama": "Puncak Jaya", "Kode": "91.07" },
+      { "NO": "24", "Kab": "Kab.", "Nama": "Sarmi", "Kode": "91.10" },
+      { "NO": "25", "Kab": "Kab.", "Nama": "Supiori", "Kode": "91.19" },
+      { "NO": "26", "Kab": "Kab.", "Nama": "Tolikara", "Kode": "91.14" },
+      { "NO": "27", "Kab": "Kab.", "Nama": "Waropen", "Kode": "91.15" },
+      { "NO": "28", "Kab": "Kab.", "Nama": "Yahukimo", "Kode": "91.13" },
+      { "NO": "29", "Kab": "Kab.", "Nama": "Yalimo", "Kode": "91.22" }
+    ]
+  },
+  {
+    "No": "25",
+    "Provinsi": "Papua Barat",
+    "Kode": "92",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Fakfak", "Kode": "92.03" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Kaimana", "Kode": "92.08" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Manokwari", "Kode": "92.02" },
+      {
+        "NO": "4",
+        "Kab": "Kab.",
+        "Nama": "Manokwari Selatan",
+        "Kode": "92.11"
+      },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Maybrat", "Kode": "92.10" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Pegunungan Arfak", "Kode": "92.12" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Raja Ampat", "Kode": "92.05" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Sorong", "Kode": "92.01" },
+      { "NO": "9", "Kab": "Kota", "Nama": "Sorong", "Kode": "92.71" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Sorong Selatan", "Kode": "92.04" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Tambrauw", "Kode": "92.09" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Teluk Bintuni", "Kode": "92.06" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Teluk Wondama", "Kode": "92.07" }
+    ]
+  },
+  {
+    "No": "26",
+    "Provinsi": "Riau",
+    "Kode": "14",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Bengkalis", "Kode": "14.03" },
+      { "NO": "2", "Kab": "Kota", "Nama": "Dumai", "Kode": "14.72" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Indragiri Hilir", "Kode": "14.04" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Indragiri Hulu", "Kode": "14.02" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Kampar", "Kode": "14.01" },
+      {
+        "NO": "6",
+        "Kab": "Kab.",
+        "Nama": "Kepulauan Meranti",
+        "Kode": "14.10"
+      },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Kuantan Singingi", "Kode": "14.09" },
+      { "NO": "8", "Kab": "Kota", "Nama": "Pekanbaru", "Kode": "14.71" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Pelalawan", "Kode": "14.05" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Rokan Hilir", "Kode": "14.07" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Rokan Hulu", "Kode": "14.06" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Siak", "Kode": "14.08" }
+    ]
+  },
+  {
+    "No": "27",
+    "Provinsi": "Sulawesi Barat",
+    "Kode": "76",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Majene", "Kode": "76.05" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Mamasa", "Kode": "76.03" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Mamuju", "Kode": "76.02" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Mamuju Tengah", "Kode": "76.06" },
+      {
+        "NO": "5",
+        "Kab": "Kab.",
+        "Nama": "Pasangkayu (Mamuju Utara)",
+        "Kode": "76.01"
+      },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Polewali Mandar", "Kode": "76.04" }
+    ]
+  },
+  {
+    "No": "28",
+    "Provinsi": "Sulawesi Selatan",
+    "Kode": "73",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Bantaeng", "Kode": "73.03" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Barru", "Kode": "73.11" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Bone", "Kode": "73.08" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Bulukumba", "Kode": "73.02" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Enrekang", "Kode": "73.16" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Gowa", "Kode": "73.06" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Jeneponto", "Kode": "73.04" },
+      {
+        "NO": "8",
+        "Kab": "Kab.",
+        "Nama": "Kepulauan Selayar",
+        "Kode": "73.01"
+      },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Luwu", "Kode": "73.17" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Luwu Timur", "Kode": "73.24" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Luwu Utara", "Kode": "73.22" },
+      { "NO": "12", "Kab": "Kota", "Nama": "Makassar", "Kode": "73.71" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Maros", "Kode": "73.09" },
+      { "NO": "14", "Kab": "Kota", "Nama": "Palopo", "Kode": "73.73" },
+      {
+        "NO": "15",
+        "Kab": "Kab.",
+        "Nama": "Pangkajene Kepulauan",
+        "Kode": "73.10"
+      },
+      { "NO": "16", "Kab": "Kota", "Nama": "Parepare", "Kode": "73.72" },
+      { "NO": "17", "Kab": "Kab.", "Nama": "Pinrang", "Kode": "73.15" },
+      {
+        "NO": "18",
+        "Kab": "Kab.",
+        "Nama": "Sidenreng Rappang",
+        "Kode": "73.14"
+      },
+      { "NO": "19", "Kab": "Kab.", "Nama": "Sinjai", "Kode": "73.07" },
+      { "NO": "20", "Kab": "Kab.", "Nama": "Soppeng", "Kode": "73.12" },
+      { "NO": "21", "Kab": "Kab.", "Nama": "Takalar", "Kode": "73.05" },
+      { "NO": "22", "Kab": "Kab.", "Nama": "Tana Toraja", "Kode": "73.18" },
+      { "NO": "23", "Kab": "Kab.", "Nama": "Toraja Utara", "Kode": "73.26" },
+      { "NO": "24", "Kab": "Kab.", "Nama": "Wajo", "Kode": "73.13" }
+    ]
+  },
+  {
+    "No": "29",
+    "Provinsi": "Sulawesi Tengah",
+    "Kode": "72",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Banggai", "Kode": "72.01" },
+      {
+        "NO": "2",
+        "Kab": "Kab.",
+        "Nama": "Banggai Kepulauan",
+        "Kode": "72.07"
+      },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Banggai Laut", "Kode": "72.11" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Buol", "Kode": "72.05" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Donggala", "Kode": "72.03" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Morowali", "Kode": "72.06" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Morowali Utara", "Kode": "72.12" },
+      { "NO": "8", "Kab": "Kota", "Nama": "Palu", "Kode": "72.71" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Parigi Moutong", "Kode": "72.08" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Poso", "Kode": "72.02" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Sigi", "Kode": "72.10" },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Tojo Una-Una", "Kode": "72.09" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Toli-Toli", "Kode": "72.04" }
+    ]
+  },
+  {
+    "No": "30",
+    "Provinsi": "Sulawesi Tenggara",
+    "Kode": "74",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Bau-Bau", "Kode": "74.72" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Bombana", "Kode": "74.06" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Buton", "Kode": "74.04" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Buton Selatan", "Kode": "74.15" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Buton Tengah", "Kode": "74.14" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Buton Utara", "Kode": "74.10" },
+      { "NO": "7", "Kab": "Kota", "Nama": "Kendari", "Kode": "74.71" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Kolaka", "Kode": "74.01" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Kolaka Timur", "Kode": "74.11" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Kolaka Utara", "Kode": "74.08" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Konawe", "Kode": "74.02" },
+      {
+        "NO": "12",
+        "Kab": "Kab.",
+        "Nama": "Konawe Kepulauan",
+        "Kode": "74.12"
+      },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Konawe Selatan", "Kode": "74.05" },
+      { "NO": "14", "Kab": "Kab.", "Nama": "Konawe Utara", "Kode": "74.09" },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Muna", "Kode": "74.03" },
+      { "NO": "16", "Kab": "Kab.", "Nama": "Muna Barat", "Kode": "74.13" },
+      { "NO": "17", "Kab": "Kab.", "Nama": "Wakatobi", "Kode": "74.07" }
+    ]
+  },
+  {
+    "No": "31",
+    "Provinsi": "Sulawesi Utara",
+    "Kode": "71",
+    "kota": [
+      { "NO": "1", "Kab": "Kota", "Nama": "Bitung", "Kode": "71.72" },
+      {
+        "NO": "2",
+        "Kab": "Kab.",
+        "Nama": "Bolaang Mongondow",
+        "Kode": "71.01"
+      },
+      {
+        "NO": "3",
+        "Kab": "Kab.",
+        "Nama": "Bolaang Mongondow Selatan",
+        "Kode": "71.11"
+      },
+      {
+        "NO": "4",
+        "Kab": "Kab.",
+        "Nama": "Bolaang Mongondow Timur",
+        "Kode": "71.10"
+      },
+      {
+        "NO": "5",
+        "Kab": "Kab.",
+        "Nama": "Bolaang Mongondow Utara",
+        "Kode": "71.08"
+      },
+      {
+        "NO": "6",
+        "Kab": "Kab.",
+        "Nama": "Kepulauan Sangihe",
+        "Kode": "71.03"
+      },
+      {
+        "NO": "7",
+        "Kab": "Kab.",
+        "Nama": "Kepulauan Siau Tagulandang Biaro (Sitaro)",
+        "Kode": "71.09"
+      },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Kepulauan Talaud", "Kode": "71.04" },
+      { "NO": "9", "Kab": "Kota", "Nama": "Kotamobagu", "Kode": "71.74" },
+      { "NO": "10", "Kab": "Kota", "Nama": "Manado", "Kode": "71.71" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Minahasa", "Kode": "71.02" },
+      {
+        "NO": "12",
+        "Kab": "Kab.",
+        "Nama": "Minahasa Selatan",
+        "Kode": "71.05"
+      },
+      {
+        "NO": "13",
+        "Kab": "Kab.",
+        "Nama": "Minahasa Tenggara",
+        "Kode": "71.07"
+      },
+      { "NO": "14", "Kab": "Kab.", "Nama": "Minahasa Utara", "Kode": "71.06" },
+      { "NO": "15", "Kab": "Kota", "Nama": "Tomohon", "Kode": "71.73" }
+    ]
+  },
+  {
+    "No": "32",
+    "Provinsi": "Sumatera Barat",
+    "Kode": "13",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Agam", "Kode": "13.06" },
+      { "NO": "2", "Kab": "Kota", "Nama": "Bukittinggi", "Kode": "13.75" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Dharmasraya", "Kode": "13.10" },
+      {
+        "NO": "4",
+        "Kab": "Kab.",
+        "Nama": "Kepulauan Mentawai",
+        "Kode": "13.09"
+      },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Lima Puluh Kota", "Kode": "13.07" },
+      { "NO": "6", "Kab": "Kota", "Nama": "Padang", "Kode": "13.71" },
+      { "NO": "7", "Kab": "Kota", "Nama": "Padang Panjang", "Kode": "13.74" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Padang Pariaman", "Kode": "13.05" },
+      { "NO": "9", "Kab": "Kota", "Nama": "Pariaman", "Kode": "13.77" },
+      { "NO": "10", "Kab": "Kab.", "Nama": "Pasaman", "Kode": "13.08" },
+      { "NO": "11", "Kab": "Kab.", "Nama": "Pasaman Barat", "Kode": "13.12" },
+      { "NO": "12", "Kab": "Kota", "Nama": "Payakumbuh", "Kode": "13.76" },
+      { "NO": "13", "Kab": "Kab.", "Nama": "Pesisir Selatan", "Kode": "13.01" },
+      { "NO": "14", "Kab": "Kota", "Nama": "Sawah Lunto", "Kode": "13.73" },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Sijunjung", "Kode": "13.03" },
+      { "NO": "16", "Kab": "Kab.", "Nama": "Solok", "Kode": "13.02" },
+      { "NO": "17", "Kab": "Kota", "Nama": "Solok", "Kode": "13.72" },
+      { "NO": "18", "Kab": "Kab.", "Nama": "Solok Selatan", "Kode": "13.11" },
+      { "NO": "19", "Kab": "Kab.", "Nama": "Tanah Datar", "Kode": "13.04" }
+    ]
+  },
+  {
+    "No": "33",
+    "Provinsi": "Sumatera Selatan",
+    "Kode": "16",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Banyuasin", "Kode": "16.07" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Empat Lawang", "Kode": "16.11" },
+      { "NO": "3", "Kab": "Kab.", "Nama": "Lahat", "Kode": "16.04" },
+      { "NO": "4", "Kab": "Kota", "Nama": "Lubuk Linggau", "Kode": "16.73" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Muara Enim", "Kode": "16.03" },
+      { "NO": "6", "Kab": "Kab.", "Nama": "Musi Banyuasin", "Kode": "16.06" },
+      { "NO": "7", "Kab": "Kab.", "Nama": "Musi Rawas", "Kode": "16.05" },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Musi Rawas Utara", "Kode": "16.13" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Ogan Ilir", "Kode": "16.10" },
+      {
+        "NO": "10",
+        "Kab": "Kab.",
+        "Nama": "Ogan Komering Ilir",
+        "Kode": "16.02"
+      },
+      {
+        "NO": "11",
+        "Kab": "Kab.",
+        "Nama": "Ogan Komering Ulu",
+        "Kode": "16.01"
+      },
+      {
+        "NO": "12",
+        "Kab": "Kab.",
+        "Nama": "Ogan Komering Ulu Selatan",
+        "Kode": "16.09"
+      },
+      {
+        "NO": "13",
+        "Kab": "Kab.",
+        "Nama": "Ogan Komering Ulu Timur",
+        "Kode": "16.08"
+      },
+      { "NO": "14", "Kab": "Kota", "Nama": "Pagar Alam", "Kode": "16.72" },
+      { "NO": "15", "Kab": "Kota", "Nama": "Palembang", "Kode": "16.71" },
+      {
+        "NO": "16",
+        "Kab": "Kab.",
+        "Nama": "Penukal Abab Lematang Ilir",
+        "Kode": "16.12"
+      },
+      { "NO": "17", "Kab": "Kota", "Nama": "Prabumulih", "Kode": "16.74" }
+    ]
+  },
+  {
+    "No": "34",
+    "Provinsi": "Sumatera Utara",
+    "Kode": "12",
+    "kota": [
+      { "NO": "1", "Kab": "Kab.", "Nama": "Asahan", "Kode": "12.09" },
+      { "NO": "2", "Kab": "Kab.", "Nama": "Batu Bara", "Kode": "12.19" },
+      { "NO": "3", "Kab": "Kota", "Nama": "Binjai", "Kode": "12.75" },
+      { "NO": "4", "Kab": "Kab.", "Nama": "Dairi", "Kode": "12.11" },
+      { "NO": "5", "Kab": "Kab.", "Nama": "Deli Serdang", "Kode": "12.07" },
+      { "NO": "6", "Kab": "Kota", "Nama": "Gunungsitoli", "Kode": "12.78" },
+      {
+        "NO": "7",
+        "Kab": "Kab.",
+        "Nama": "Humbang Hasundutan",
+        "Kode": "12.16"
+      },
+      { "NO": "8", "Kab": "Kab.", "Nama": "Karo", "Kode": "12.06" },
+      { "NO": "9", "Kab": "Kab.", "Nama": "Labuhanbatu", "Kode": "12.10" },
+      {
+        "NO": "10",
+        "Kab": "Kab.",
+        "Nama": "Labuhanbatu Selatan",
+        "Kode": "12.22"
+      },
+      {
+        "NO": "11",
+        "Kab": "Kab.",
+        "Nama": "Labuhanbatu Utara",
+        "Kode": "12.23"
+      },
+      { "NO": "12", "Kab": "Kab.", "Nama": "Langkat", "Kode": "12.05" },
+      {
+        "NO": "13",
+        "Kab": "Kab.",
+        "Nama": "Mandailing Natal",
+        "Kode": "12.13"
+      },
+      { "NO": "14", "Kab": "Kota", "Nama": "Medan", "Kode": "12.71" },
+      { "NO": "15", "Kab": "Kab.", "Nama": "Nias", "Kode": "12.04" },
+      { "NO": "16", "Kab": "Kab.", "Nama": "Nias Barat", "Kode": "12.25" },
+      { "NO": "17", "Kab": "Kab.", "Nama": "Nias Selatan", "Kode": "12.14" },
+      { "NO": "18", "Kab": "Kab.", "Nama": "Nias Utara", "Kode": "12.24" },
+      { "NO": "19", "Kab": "Kab.", "Nama": "Padang Lawas", "Kode": "12.21" },
+      {
+        "NO": "20",
+        "Kab": "Kab.",
+        "Nama": "Padang Lawas Utara",
+        "Kode": "12.20"
+      },
+      {
+        "NO": "21",
+        "Kab": "Kota",
+        "Nama": "Padang Sidempuan",
+        "Kode": "12.77"
+      },
+      { "NO": "22", "Kab": "Kab.", "Nama": "Pakpak Bharat", "Kode": "12.15" },
+      {
+        "NO": "23",
+        "Kab": "Kota",
+        "Nama": "Pematang Siantar",
+        "Kode": "12.72"
+      },
+      { "NO": "24", "Kab": "Kab.", "Nama": "Samosir", "Kode": "12.17" },
+      { "NO": "25", "Kab": "Kab.", "Nama": "Serdang Bedagai", "Kode": "12.18" },
+      { "NO": "26", "Kab": "Kota", "Nama": "Sibolga", "Kode": "12.73" },
+      { "NO": "27", "Kab": "Kab.", "Nama": "Simalungun", "Kode": "12.08" },
+      { "NO": "28", "Kab": "Kota", "Nama": "Tanjung Balai", "Kode": "12.74" },
+      {
+        "NO": "29",
+        "Kab": "Kab.",
+        "Nama": "Tapanuli Selatan",
+        "Kode": "12.03"
+      },
+      { "NO": "30", "Kab": "Kab.", "Nama": "Tapanuli Tengah", "Kode": "12.01" },
+      { "NO": "31", "Kab": "Kab.", "Nama": "Tapanuli Utara", "Kode": "12.02" },
+      { "NO": "32", "Kab": "Kota", "Nama": "Tebing Tinggi", "Kode": "12.76" },
+      { "NO": "33", "Kab": "Kab.", "Nama": "Toba Samosir", "Kode": "12.12" }
+    ]
+  }
+]

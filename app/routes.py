@@ -1,6 +1,18 @@
+import csv
+import json
 from app import app, db
-from flask import render_template, request, redirect, url_for, session, flash
+from flask import render_template, request, redirect, url_for, session, flash, jsonify
 from functools import wraps
+from firebase_admin import firestore
+import pandas as pd
+
+with open("app/Data/Prov.json") as jsonFile:
+    dataJson = json.load(jsonFile)
+    jsonFile.close
+
+# with open("app/Data/Prov.csv") as csvFile:
+#     dataCsv = csv.reader(csvFile)
+#     csvFile.close
 
 
 # Login Reuired
@@ -126,3 +138,39 @@ def register():
         return redirect(url_for('login'))
 
     return render_template("page/register.html")
+
+
+@app.route("/nasabah", methods=['GET', 'POST'])
+@login_req
+def nasabah():
+    return render_template("page/nasabah.html")
+
+
+@app.route("/data/provinsi", methods=['GET', 'POST'])
+def dataProvinsi():
+    data = db.collection("prov").order_by(
+        'Provinsi', direction=firestore.Query.ASCENDING).stream()
+    prov = []
+    for pr in data:
+        p = pr.to_dict()
+        p['id'] = pr.id
+        prov.append(p)
+
+    return render_template("page/provinsi.html", provinsi=prov)
+
+
+@app.route("/nsb")
+def imp():
+
+    # for itm in dataJson:
+    # db.collection("prov").document().set(itm)
+    # db.collection("Provinsi").document(u"00000Coba").update({
+    #     u'color.red':
+    #     u'Merah',
+    #     u'color.gelap.hitam':
+    #     u'warna hitam',
+    # })
+
+    # print(dataCsv)
+
+    return jsonify(dataJson)

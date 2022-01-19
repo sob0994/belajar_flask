@@ -56,7 +56,6 @@
     transition: all 0.5s ease;
     width: 100%;
     overflow: hidden;
-    z-index: inherit;
   }
   .topnav .search {
     display: flex;
@@ -118,12 +117,12 @@
     transform: translateX(100%);
     overflow: hidden;
     pointer-events: none;
-    /* flex: 0%; */
     transition: all 0.5s ease;
   }
   .topnav .topmenu {
     flex: auto;
     transition: all 0.5s ease;
+    z-index: 40;
   }
 
   .topnav .topmenu ul {
