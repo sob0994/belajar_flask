@@ -1,9 +1,13 @@
-{% set title = 'Formulir Pendaftaran Nasabah'%} {% extends 'base.html' %} {%
-block content %}
+{% set title = 'Daftar Provinsi'%} {% extends 'base.html' %} {% block content %}
 <style>
+  @import url("{{url_for('static',filename='src/css/datatable.css')}}");
+  /* body {
+    padding: 0px;
+    margin: 0px;
+  }
   @import url("https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css");
   .dataTables_scrollBody {
-    max-height: calc(100vh - 200px) !important;
+    max-height: calc(100vh - 250px) !important;
   }
   .mybtn {
     padding: 2px 8px;
@@ -34,11 +38,17 @@ block content %}
   }
   .btn-blue-o:hover {
     background-color: rgb(179, 212, 255);
-  }
+  } */
 </style>
+
 <div class="row" style="margin-bottom: 100px">
-  <div class="col"></div>
-  <div class="col-12 col-md-6">
+  <div class="col-1"></div>
+  <div class="col-12 col-md-8">
+    <div class="row">
+      <div class="col">
+        <h6 class="mysubtitle">List Data Provinsi</h6>
+      </div>
+    </div>
     <table
       id="example"
       class="table table-sm table-striped"
@@ -55,9 +65,11 @@ block content %}
         {% for itm in provinsi %}
         <tr>
           <td>{{itm.Kode}}</td>
-          <td>{{itm.Provinsi}}</td>
-          <td>
-            <a href="/{{ itm.id }}" class="mybtn btn-blue-o">Edit</a>
+          <td><a href="/data/provinsi/{{itm.id}}">{{itm.Provinsi}}</a></td>
+          <td style="text-align: right">
+            <a href="/data/provinsi/{{itm.id}}" class="mybtn btn-blue-o"
+              >Edit</a
+            >
             <a href="/{{ itm.id }}" class="mybtn btn-red-o">Hapus</a>
           </td>
         </tr>
@@ -74,9 +86,19 @@ block content %}
   </div>
   <div class="col"></div>
 </div>
-<script src="{{url_for('static',filename='src/js/jquery-3.5.1.js')}}"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+<div class="mymodal-container" id="mymodal">
+  <div class="mymodal-content">
+    <div class="mymodal-header">
+      <h5>Modal Dialong</h5>
+    </div>
+    <div class="mymodal-body">Modal content</div>
+    <div class="mymodal-footer grid">
+      <button class="btn btn-sm btn-primary m-1">Save</button>
+      <button class="btn btn-sm btn-secondary m-1" close-modal>close</button>
+    </div>
+  </div>
+</div>
+{% include 'style/datatable.html' %}
 <script>
   $(document).ready(function () {
     $("#example").DataTable({
@@ -85,6 +107,8 @@ block content %}
       scrollY: 300,
       scrollCollapse: true,
     });
+    addDataTableModalButton("example", "#mymodal", "Tambah");
+    // regModal("mymodal");
   });
 </script>
 {% endblock %}

@@ -1,0 +1,40 @@
+@import url("https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css");
+.dataTables_scrollBody {
+  max-height: calc(100vh - 250px) !important;
+}
+.mybtn {
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.btn-green-o {
+  background-color: rgb(231, 255, 231);
+  color: rgb(0, 102, 0);
+  border: solid 1px rgb(132, 255, 132);
+}
+.btn-green-o:hover {
+  background-color: rgb(179, 255, 179);
+}
+.btn-red-o {
+  background-color: rgb(255, 231, 231);
+  color: rgb(150, 0, 0);
+  border: solid 1px rgb(255, 132, 132);
+}
+.btn-red-o:hover {
+  background-color: rgb(255, 179, 179);
+}
+.btn-blue-o {
+  background-color: rgb(231, 241, 255);
+  color: rgb(0, 53, 102);
+  border: solid 1px rgb(84, 172, 255);
+}
+.btn-blue-o:hover {
+  background-color: rgb(179, 212, 255);
+}
+.mysubtitle {
+  background-color: var(--color2);
+  color: white;
+  padding: 5px 10px;
+  font-weight: 600;
+}

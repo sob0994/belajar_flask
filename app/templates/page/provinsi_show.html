@@ -1,0 +1,92 @@
+{% set title = 'Formulir Pendaftaran Nasabah'%} {% extends 'base.html' %} {%
+block content %}
+<style>
+  @import url("{{url_for('static',filename='src/css/datatable.css')}}");
+</style>
+<div class="row" style="margin-bottom: 100px">
+  <div class="col-1"></div>
+  <div class="col-12 col-md-8">
+    <div class="row">
+      <div class="col">
+        <h6 class="mysubtitle">Data Provinsi</h6>
+      </div>
+    </div>
+    <div class="row" style="width: 100%; margin: auto">
+      <table class="table" style="width: 100%">
+        <tbody>
+          <tr>
+            <td style="max-width: 150px">Kode Wilayah</td>
+            <td>:</td>
+            <td>{{provs['Kode']}}</td>
+          </tr>
+          <tr>
+            <td>Provinsi</td>
+            <td>:</td>
+            <td><strong>{{provs['Provinsi']}}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h6 class="mysubtitle">List Data Kabupaten / Kota</h6>
+      </div>
+    </div>
+    <div class="row">
+      <table
+        id="kota"
+        class="table table-sm table-striped"
+        style="width: 100%; font-size: small"
+      >
+        <thead>
+          <tr>
+            <th>Kode</th>
+            <th>Kab/Kota</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="white-space: nowrap">100</td>
+            <td>OK</td>
+          </tr>
+          <tr>
+            <td style="white-space: nowrap">100</td>
+            <td>OK</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Kode</th>
+            <th>Kab/Kota</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  <div class="col"></div>
+</div>
+<div class="mymodal-container" id="mymodal">
+  <div class="mymodal-content">
+    <div class="mymodal-header">
+      <h5>Modal Dialong</h5>
+    </div>
+    <div class="mymodal-body">Modal content</div>
+    <div class="mymodal-footer grid">
+      <button class="btn btn-sm btn-primary m-1">Save</button>
+      <button class="btn btn-sm btn-secondary m-1" close-modal>close</button>
+    </div>
+  </div>
+</div>
+{% include 'style/datatable.html' %}
+<script>
+  $(document).ready(function () {
+    $("#kota").DataTable({
+      paging: false,
+      info: false,
+      // scrollY: 300,
+      scrollCollapse: true,
+    });
+    addDataTableModalButton("kota", "#mymodal", "Tambah");
+  });
+</script>
+{% endblock %}

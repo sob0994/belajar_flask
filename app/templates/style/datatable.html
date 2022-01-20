@@ -1,0 +1,28 @@
+<script src="{{url_for('static',filename='src/js/jquery-3.5.1.js')}}"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+<script>
+  const addButtonTambah = (el, path) => {
+    var lokasi = document.getElementById(`${el}_wrapper`).children[0]
+      .children[0];
+    var btn = document.createElement("a");
+    btn.classList.add("btn", "btn-sm", "btn-secondary");
+    btn.href = path;
+    btn.innerText = "Tambah";
+
+    lokasi.appendChild(btn);
+  };
+  const addDataTableModalButton = (el, target, text) => {
+    var lokasi = document.getElementById(`${el}_wrapper`).children[0]
+      .children[0];
+    var btn = document.createElement("button");
+    btn.classList.add("btn", "btn-sm", "btn-secondary");
+    btn.type = "button";
+    btn.innerText = text;
+    btn.setAttribute("open-modal", target);
+
+    lokasi.appendChild(btn);
+
+    regModal(target);
+  };
+</script>
