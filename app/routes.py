@@ -168,11 +168,18 @@ def showProvinsi(uid):
 @app.route("/importdata/provinsi", methods=["POST"])
 def importProvinsi():
     if request.method == 'POST':
-        fl = request.files['pilih-excel']
-        dt = pd.read_excel(fl)
-        oks = dt.to_dict()
-        ok = {}
-        for i in oks.keys():
-            ok = i
+        fl = request.files
+        pdr = pd.read_excel(fl['fileExcel'])
+        oks = pdr.to_dict(orient='index')
+        arr = []
+        for oo in oks:
+            arr.append(oks[oo])
 
-        return ok
+        return jsonify(arr)
+        # fl = request.form['pilih-excel']
+        # dt = pd.read_excel(fl)
+        # oks = dt.to_dict(orient='index')
+        # ok = []
+        # for oo in oks:
+        #     ok.append(oks[oo])
+        # return jsonify(ok)
