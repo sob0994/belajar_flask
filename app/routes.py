@@ -1,10 +1,13 @@
+import json
 from app import app, db
 from flask import render_template, request, redirect, url_for, session, flash, jsonify
 from functools import wraps
 from firebase_admin import firestore
-
+import pandas as pd
 
 # Login Reuired
+
+
 def uselogin(f):
     @wraps(f)
     def wrap(*ar, **ars):
@@ -135,6 +138,11 @@ def nasabah():
 
 @app.route("/data/provinsi", methods=["GET", "POST"])
 def dataProvinsi():
+    if request.method == 'post':
+        df = request.form.get('pilih-excel')
+        dr = pd.read_excel(df).to_json
+        return jsonify(dr)
+
     data = (db.collection("prov").order_by(
         "Provinsi", direction=firestore.Query.ASCENDING).stream())
     prov = []
@@ -155,3 +163,16 @@ def showProvinsi(uid):
         return render_template('page/provinsi_show.html', provs=provs)
 
     return redirect(url_for('dataProvinsi'))
+
+
+@app.route("/importdata/provinsi", methods=["POST"])
+def importProvinsi():
+    if request.method == 'POST':
+        fl = request.files['pilih-excel']
+        dt = pd.read_excel(fl)
+        oks = dt.to_dict()
+        ok = {}
+        for i in oks.keys():
+            ok = i
+
+        return ok

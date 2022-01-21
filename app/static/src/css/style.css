@@ -291,7 +291,7 @@ body {
 .mymodal-container .mymodal-content {
   background-color: white;
   border-radius: 5px;
-  min-width: 400px;
+  min-width: 340px;
 }
 .mymodal-container .mymodal-content .mymodal-header {
   padding: 10px 10px 0px 10px;
@@ -300,7 +300,7 @@ body {
 .mymodal-container .mymodal-content .mymodal-body {
   min-height: 50px;
   padding: 10px;
-  max-height: calc(100vh - 300px);
+  max-height: calc(100vh - 10%);
   overflow: auto;
 }
 .mymodal-container .mymodal-content .mymodal-footer {
