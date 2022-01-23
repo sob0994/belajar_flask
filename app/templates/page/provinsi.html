@@ -27,6 +27,7 @@
         <tr>
           <th>Kode</th>
           <th>Provinsi</th>
+          <th>Jumlah kota</th>
           <th></th>
         </tr>
       </thead>
@@ -35,6 +36,9 @@
         <tr>
           <td>{{itm.Kode}}</td>
           <td><a href="/data/provinsi/{{itm.id}}">{{itm.Provinsi}}</a></td>
+          <td style="text-align: right; width: min-content">
+            {{itm.jumlahKota}}
+          </td>
           <td style="text-align: right">
             <a href="/data/provinsi/{{itm.id}}" class="mybtn btn-blue-o"
               >Edit</a
@@ -48,6 +52,7 @@
         <tr>
           <th>Kode</th>
           <th>Provinsi</th>
+          <th>Jumlah kota</th>
           <th></th>
         </tr>
       </tfoot>
@@ -55,7 +60,8 @@
   </div>
   <div class="col"></div>
 </div>
-<div class="mymodal-container open" id="mymodal">
+<!-- Modal Start -->
+<div class="mymodal-container" id="mymodal">
   <div class="mymodal-content col-11 col-sm-8 col-md-6">
     <div class="mymodal-header">
       <h5>Input Data Provinsi</h5>
@@ -105,8 +111,6 @@
           aria-labelledby="nav-profile-tab"
         >
           <!-- Tab Pane Import Start -->
-          <!-- action="/importdata/provinsi"
-          enctype="multipart/form-data" -->
           <form
             method="post"
             name="form-excel"
@@ -204,6 +208,8 @@
     </div>
   </div>
 </div>
+<!-- Modal End -->
+
 {% include 'style/datatable.html' %}
 <script>
   $(document).ready(function () {
@@ -251,27 +257,6 @@
         });
       }
     });
-
-    // $("#btn-pilih-excel").click((e) => {
-    //   e.preventDefault();
-    //   let fmData = new FormData();
-    //   fmData.append("ok", "Oke Bro");
-    //   fmData.append("bs", document.forms["form-excel"][0].files[0]);
-
-    //   $.ajax({
-    //     type: "post",
-    //     url: "/importdata/provinsi",
-    //     data: fmData,
-    //     processData: false,
-    //     contentType: false,
-    //     success: (data) => {
-    //       console.log({ data });
-    //     },
-    //     error: (er) => {
-    //       console.log({ er });
-    //     },
-    //   });
-    // });
   });
   // Function helpers Start=================================================
   const valid = (data) => {

@@ -1,4 +1,3 @@
-import json
 from app import app, db
 from flask import render_template, request, redirect, url_for, session, flash, jsonify
 from functools import wraps
@@ -157,10 +156,19 @@ def dataProvinsi():
 @app.route("/data/provinsi/<uid>")
 @uselogin
 def showProvinsi(uid):
-    provs = db.collection('prov').document(uid).get().to_dict()
+    ps = db.collection('prov').document(uid)
+    provs = ps.get().to_dict()
+    kotas = db.collection('kota').where(
+        'kodeProv', '==', provs['Kode']).stream()
+    kota = []
+    for i in kotas:
+        kota.append(i.to_dict())
+
+    jumlahKota = len(kota)
+    ps.update({'jumlahKota': jumlahKota})
 
     if provs:
-        return render_template('page/provinsi_show.html', provs=provs)
+        return render_template('page/provinsi_show.html', provs=provs, kota=kota)
 
     return redirect(url_for('dataProvinsi'))
 
@@ -176,10 +184,96 @@ def importProvinsi():
             arr.append(oks[oo])
 
         return jsonify(arr)
-        # fl = request.form['pilih-excel']
-        # dt = pd.read_excel(fl)
-        # oks = dt.to_dict(orient='index')
-        # ok = []
-        # for oo in oks:
-        #     ok.append(oks[oo])
-        # return jsonify(ok)
+
+
+@app.route('/importdata/kota', methods=['POST'])
+@uselogin
+def importKota():
+    if request.method == 'POST':
+        # Request File
+        flName = request.files.get('fileExcel')
+        fileSupport = ['xls', 'xlsx', 'xlsb', 'csv', 'json']
+        flType = flName.filename.split('.')[-1]
+        # Check File Type
+        if not flType in fileSupport:
+            return jsonify({'msg': 'File tidak didukung'})
+
+        dataImport = []
+        # If file Excel
+        if flType[0:2] == 'xl':
+            dataExcel = pd.read_excel(
+                flName, index_col=0, dtype={'Kode': str}).to_dict(orient='records')
+            for i in dataExcel:
+                dataImport.append(i)
+        # if file Json
+        if flType[0:2] == 'js':
+            dataJson = pd.read_json(
+                flName, dtype={'Kode': str}).to_dict(orient='index')
+            for i in dataJson:
+                dataImport.append(dataJson[i])
+        # if file Csv
+        if flType[0:2] == 'cs':
+            dataCsv = pd.read_csv(
+                flName, dtype={'Kode': str}).to_dict(orient='index')
+            for i in dataCsv:
+                dataImport.append(dataCsv[i])
+        # Initial Data Status
+        status = {
+            'sukses': [],
+            'KodeProv': [],
+            'KodeProvErr': [],
+            'data': [],
+            'dataOk': [],
+            'dataErr': [],
+            'dataEx': [],
+            'prov': [],
+        }
+        # Serialize Struktur Data
+        for i in dataImport:
+            # Jika berisi Kolom (Kode, Nama, Kab) maka Sesuai
+            if 'Kode' and 'Nama' and 'Kab' in i:
+                myData = {
+                    'Kode': i['Kode'],
+                    'Nama': i['Nama'],
+                    'Kab': i['Kab'],
+                    'kodeProv': i['Kode'][0:2]
+                }
+
+                status["data"].append(myData)
+                if i['Kode'][0:2] not in status["KodeProvErr"]:
+                    status["KodeProvErr"].append(i['Kode'][0:2])
+
+            else:
+                # File tidak sesuai
+                return jsonify({'msg': 'File tidak sesuai format'})
+
+        # Cek Provinsi Terdaftar
+        dbProv = db.collection('prov')
+        for i in status["KodeProvErr"]:
+            kode = dbProv.where('Kode', '==', i).stream()
+            for a in kode:
+                # print(i)
+                status["KodeProv"].append(i)
+                status["prov"].append(
+                    {'Kode': i, 'id': a.id, 'Kota': []})
+        print(status["KodeProv"])
+        # Pisahkan Data Error
+        for d in status["data"]:
+            if d['Kode'][0:2] in status["KodeProv"]:
+                status["dataOk"].append(d)
+            else:
+                status['dataErr'].append(d)
+        # Simpan ke Database Kota
+        dbatch = db.batch()
+        dbKota = db.collection('kota')
+        for i in status["dataOk"]:
+            its = dbKota.where('Kode', '==', i['Kode']).stream()
+            oks = {}
+            for it in its:
+                oks = it.to_dict()
+            if oks == {}:
+                # dbKota.document().set(i)
+                dko = dbKota.document()
+                dbatch.set(dko, i)
+            dbatch.commit()
+        return jsonify({'msg': 'File Sesuai Format', 'data': status})
