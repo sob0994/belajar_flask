@@ -132,7 +132,14 @@ def register():
 @app.route("/nasabah", methods=["GET", "POST"])
 @uselogin
 def nasabah():
-    return render_template("page/nasabah.html")
+    provs = db.collection('prov').stream()
+    prov = []
+    for i in provs:
+        a = i.to_dict()
+        a['id'] = i.id
+        prov.append(a)
+
+    return render_template("page/nasabah.html", provinsi=prov)
 
 
 @app.route("/data/provinsi", methods=["GET", "POST"])
@@ -277,3 +284,21 @@ def importKota():
                 dbatch.set(dko, i)
             dbatch.commit()
         return jsonify({'msg': 'File Sesuai Format', 'data': status})
+
+
+@app.route('/data/kota', methods=['POST'])
+@uselogin
+def ambilKota():
+    if request.method == 'POST':
+        # get Request Data
+        kodeProv = request.args.get('provinsi')
+        kota = []
+        dbKota = db.collection('kota')
+        if kodeProv:
+            kts = dbKota.where('kodeProv', '==', kodeProv).stream()
+            for i in kts:
+                p = i.to_dict()
+                p['id'] = i.id
+                kota.append(p)
+
+    return jsonify(kota)

@@ -2,3 +2,4 @@ myenv
 .vscode
 __pycache__
 app/Data
+mc-agent-v2

@@ -61,7 +61,7 @@
   <div class="col"></div>
 </div>
 <!-- Modal Start -->
-<div class="mymodal-container" id="mymodal">
+<div class="mymodal-container open" id="mymodal">
   <div class="mymodal-content col-11 col-sm-8 col-md-6">
     <div class="mymodal-header">
       <h5>Input Data Provinsi</h5>
@@ -70,7 +70,7 @@
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <button
-            class="nav-link"
+            class="nav-link active"
             id="nav-home-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-home"
@@ -82,7 +82,7 @@
             Input Form
           </button>
           <button
-            class="nav-link active"
+            class="nav-link"
             id="nav-profile-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-profile"
@@ -95,17 +95,39 @@
           </button>
         </div>
       </nav>
+      <!-- Content Tab -->
       <div class="tab-content" id="nav-tabContent">
         <div
-          class="tab-pane fade"
+          class="tab-pane fade show active"
           id="nav-home"
           role="tabpanel"
           aria-labelledby="nav-home-tab"
         >
-          Input FOrm
+          <form id="formInput">
+            <div class="mb-2 form-group">
+              <label class="f_label" for="KodeWilayah">Kode Wilayah</label>
+              <input
+                type="text"
+                class="form-control f_input"
+                name="KodeWilayah"
+                id="KodeWilayah"
+                placeholder="Masukkan kode wilayah..."
+              />
+            </div>
+            <div class="mb-2 form-group">
+              <label for="Provinsi">Provinsi</label>
+              <input
+                type="text"
+                class="form-control"
+                name="Provinsi"
+                id="Provinsi"
+                placeholder="Masukkan nama provinsi..."
+              />
+            </div>
+          </form>
         </div>
         <div
-          class="tab-pane fade show active"
+          class="tab-pane fade"
           id="nav-profile"
           role="tabpanel"
           aria-labelledby="nav-profile-tab"

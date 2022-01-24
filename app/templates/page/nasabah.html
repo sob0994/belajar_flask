@@ -272,25 +272,22 @@ block content %}
               <label for="provinsi">Provinsi</label>
               <select name="provinsi" id="provinsi">
                 <option value="">--Pilih Provinsi--</option>
-                <option value="Bali">Bali</option>
-                <option value="Jawa Timur">Jawa Timur</option>
+                {% for prov in provinsi %}
+                <option kode="{{prov.Kode}}" value="{{prov.Provinsi}}">
+                  Provinsi {{prov.Provinsi}}
+                </option>
+                {% endfor %}
               </select>
               <p class="mystatus" id="msg_provinsi"></p>
             </div>
           </div>
-          <div class="col">
+          <div class="col-12 col-sm-6">
             <div class="input_group">
-              <label for="golonganDarah">Golongan Darah</label>
-              <input
-                type="text"
-                autocomplete="off"
-                autocapitalize="off"
-                required
-                id="golonganDarah"
-                name="golonganDarah"
-                placeholder="Golongan Darah"
-              />
-              <p class="mystatus" id="msg_golonganDarah"></p>
+              <label for="kabKota">Kab/Kota</label>
+              <select name="kabKota" id="kabKota">
+                <option value="">--Pilih Kab/Kota--</option>
+              </select>
+              <p class="mystatus" id="msg_kabKota"></p>
             </div>
           </div>
         </div>
@@ -299,10 +296,44 @@ block content %}
   </div>
   <div class="col"></div>
 </div>
+<!-- {% include 'style/datatable.html' %} -->
 <script>
   $(document).ready(() => {
     $("#jenisKelamin").select2();
     $("#provinsi").select2();
+    $("#kabKota").select2();
+
+    // Handle Provinsi onChange
+    $("#provinsi").on("select2:select", (e) => {
+      // Ambil attribut Kode pada option provinsi
+      const idx = e.currentTarget.selectedIndex; //Index Option yg dipilih
+      const kode = $("#provinsi")[0][idx].getAttribute("Kode");
+      // Request Call Api Kota
+      // alert(kode);
+      $.ajax({
+        url: `/data/kota?provinsi=${kode}`,
+        type: "post",
+        data: { kode: 100 },
+        success: (data) => {
+          console.log(data);
+          // setSelector ke Option kabKota
+          let otKota = $("#kabKota")[0];
+          // let kota0 = otKota[0];
+          // otKota = [kota0];
+
+          data.forEach((i) => {
+            let o = document.createElement("option");
+            o.innerText = i.Kab + " " + i.Nama;
+            o.setAttribute("value", i.Kode);
+            o.setAttribute("kota", i.Nama);
+            otKota.append(o);
+          });
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+    });
   });
 </script>
 {% endblock %}
