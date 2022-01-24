@@ -318,8 +318,10 @@ block content %}
           console.log(data);
           // setSelector ke Option kabKota
           let otKota = $("#kabKota")[0];
-          // let kota0 = otKota[0];
-          // otKota = [kota0];
+          let kota0 = otKota[0];
+
+          otKota.innerHTML = "";
+          otKota.append(kota0);
 
           data.forEach((i) => {
             let o = document.createElement("option");
