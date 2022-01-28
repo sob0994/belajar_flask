@@ -1,340 +1,247 @@
 {% set title = 'Formulir Pendaftaran Nasabah'%} {% extends 'base.html' %} {%
 block content %}
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: "Source Sans Pro", sans-serif;
-  }
-  :root {
-    --blue-100: rgb(0, 140, 196);
-    --blue-20: rgb(231, 248, 255);
-    --blue-50: rgb(73, 167, 204);
-    --color2: gray;
-    --color2-20: rgb(240, 240, 240);
-    --color2-50: rgb(187, 187, 187);
-    --color3: rgb(255, 47, 47);
-    --trans: all 0.5s ease;
-  }
-  button,
-  input {
-    border: none;
-  }
-
-  button,
-  select,
-  input:focus {
-    outline: none;
-    border: none;
-  }
-
-  select:focus {
-    border-bottom: solid 1px rgb(187, 187, 187);
-  }
-  .input_group {
-    width: 100%;
-    margin-top: 0.4rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .input_group label {
-    color: var(--blue-100);
-    width: 100%;
-    font-size: 0.7rem;
-    font-weight: 600;
-  }
-  .input_group input,
-  span.select2-selection.select2-selection--single,
-  .input_group select {
-    background-color: var(--color2-20);
-    padding: 5px 10px;
-    margin-top: 0.3rem;
-    font-size: 0.8rem;
-    color: var(--color2);
-    border-left: 2px solid var(--blue-50);
-    width: 100%;
-  }
-  span.select2-selection.select2-selection--single:focus {
-    outline: none;
-    border-bottom: solid 1px var(--blue-50);
-  }
-  span.select2-selection.select2-selection--single {
-    display: flex;
-    padding: 0;
-    border-radius: 0;
-    align-items: center;
-    border: 0;
-    border-left: 2px solid var(--blue-50);
-  }
-  span.select2-selection__arrow {
-    margin-top: 5px;
-  }
-  .input_group input::placeholder {
-    color: var(--color2-50);
-  }
-
-  .btn {
-    padding: 10px;
-    background-color: var(--blue-50);
-    color: white;
-    width: 100%;
-  }
-  .btn:hover {
-    background-color: var(--blue-100);
-    cursor: pointer;
-  }
-
-  .msg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-    width: 100%;
-    height: 30px;
-    opacity: 1;
-  }
-  .msg.error {
-    border: 1px solid rgb(255, 133, 133);
-    background-color: rgb(255, 226, 226);
-    color: var(--color3);
-  }
-
-  .hide {
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.8 ease;
-    transition-delay: 6s;
-    height: 0;
-  }
-
-  .input_group.error input {
-    border: solid 1px var(--color3);
-    color: var(--color3);
-  }
-  .input_group.error input::placeholder {
-    color: var(--color3);
-  }
-
-  .input_group .mystatus {
-    margin: 0;
-    margin-top: 5px;
-    color: var(--color3);
-    font-size: 0.8rem;
-    opacity: 0;
-    transition: var(--trans);
-  }
-  .input_group.error .mystatus {
-    opacity: 1;
-    transition: var(--trans);
-  }
-  .form_title {
-    background-color: var(--blue-50);
-    padding: 5px 10px;
-    width: 100%;
-    color: white;
-  }
-  .form_title h3 {
-    margin: 0;
-    font-size: 0.8rem;
-  }
-</style>
-<div class="row mybox">
-  <div class="col-12 col-sm-8 col-lg-6 overflow-auto">
-    <div class="form_title">
-      <h3>A. Informasi Pribadi</h3>
-    </div>
-    <div class="row" style="padding: 0px 10px">
-      <form method="post">
-        <div class="row">
-          <div class="col-12 col-sm-8">
-            <div class="input_group">
-              <label for="nik">NIK</label>
-              <input
-                type="text"
-                autocomplete="off"
-                autocapitalize="off"
-                required
-                id="nik"
-                name="nik"
-                placeholder="Masukkan NIK..."
-              />
-              <p class="mystatus" id="msg_nik"></p>
-            </div>
-          </div>
-        </div>
-        <div class="input_group">
-          <label for="namaLengkap">Nama Lengkap</label>
+<div class="by-box mb-5">
+  <div class="row justify-content-center py-5 py-xxl-10 mx-2">
+    <div class="col-xxl-5 col-xl-8">
+      <h4 class="text-primary mb-1">Formulir Registrasi</h4>
+      <h6 class="card-title mb-4">Informasi data diri sesuai KTP</h6>
+      <form action="">
+        <div class="mb-3">
+          <label for="nik" class="small text-primary mb-1"
+            >Masukkan NIK sesuai KTP</label
+          >
           <input
-            type="text"
-            autocomplete="off"
-            autocapitalize="off"
             required
+            type="text"
+            class="form-control text-secondary"
+            id="nik"
+            name="nik"
+            placeholder="Nomor Induk Kependudukan"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="namaLengkap" class="small text-primary mb-1"
+            >Nama Lengkap</label
+          >
+          <input
+            required
+            type="text"
+            class="form-control text-secondary"
             id="namaLengkap"
             name="namaLengkap"
-            placeholder="Masukkan Nama Lengkap..."
+            placeholder="Masukkan Nama Lengkap"
           />
-          <p class="mystatus" id="msg_namaLengkap"></p>
         </div>
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <div class="input_group">
-              <label for="tempatLahir">Tempat</label>
-              <input
-                type="text"
-                autocomplete="off"
-                autocapitalize="off"
-                required
-                id="tempatLahir"
-                name="tempatLahir"
-                placeholder="Tempat Lahir"
-              />
-              <p class="mystatus" id="msg_tempatLahir"></p>
-            </div>
+        <div class="row gx-3">
+          <div class="mb-3 col-md-6">
+            <label for="tempatLahir" class="small text-primary mb-1"
+              >Tempat Lahir</label
+            >
+            <input
+              required
+              type="text"
+              class="form-control text-secondary"
+              id="tempatLahir"
+              name="tempatLahir"
+              placeholder="Tempat kelahiran"
+            />
           </div>
-          <div class="col">
-            <div class="input_group">
-              <label for="tanggalLahir">Tanggal Lahir</label>
-              <input type="date" id="tanggalLahir" name="tanggalLahir" />
-              <p class="mystatus" id="msg_tanggalLahir"></p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <div class="input_group">
-              <label for="jenisKelamin">Jenis Kelamin</label>
-              <select name="jenisKelamin" id="jenisKelamin">
-                <option value="">--Pilih Jenis Kelamin--</option>
-                <option value="Laki-laki">Laki-laki</option>
-                <option value="Perempuan">Perempuan</option>
-              </select>
-              <p class="mystatus" id="msg_jenisKelamin"></p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="input_group">
-              <label for="golonganDarah">Golongan Darah</label>
-              <input
-                type="text"
-                autocomplete="off"
-                autocapitalize="off"
-                required
-                id="golonganDarah"
-                name="golonganDarah"
-                placeholder="Golongan Darah"
-              />
-              <p class="mystatus" id="msg_golonganDarah"></p>
-            </div>
+          <div class="mb-3 col-md-6">
+            <label for="tanggalLahir" class="small text-primary mb-1"
+              >Tanggal Lahir</label
+            >
+            <input
+              required
+              type="date"
+              class="form-control text-secondary"
+              id="tanggalLahir"
+              name="tanggalLahir"
+              placeholder="Tempat Kelahiran"
+            />
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="input_group">
-              <label for="alamat">Alamat</label>
-              <input
-                type="text"
-                required
-                id="alamat"
-                name="alamat"
-                placeholder="Masukkan Alamat..."
-              />
-              <p class="mystatus" id="msg_alamat"></p>
-              <div class="row">
-                <div class="col-4 col-md-2">
-                  <input
-                    type="text"
-                    required
-                    id="rt"
-                    name="rt"
-                    placeholder="RT"
-                  />
-                  <p class="mystatus" id="msg_rt"></p>
-                </div>
-                <div class="col-4 col-md-2">
-                  <input
-                    type="text"
-                    required
-                    id="rw"
-                    name="rw"
-                    placeholder="RW"
-                  />
-                  <p class="mystatus" id="msg_rw"></p>
-                </div>
-              </div>
-            </div>
+        <div class="row gx-3">
+          <div class="mb-3 col-md-6">
+            <label for="jenisKelamin" class="small text-primary mb-1"
+              >Jenis Kelamin</label
+            >
+            <select name="jenisKelamin" id="jenisKelamin" class="form-select">
+              <option selected value="">-- Pilih Jenis Kelamin --</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="golonganDarah" class="small text-primary mb-1"
+              >Golongan Darah</label
+            >
+            <input
+              required
+              type="text"
+              class="form-control text-secondary"
+              id="golonganDarah"
+              name="golonganDarah"
+              placeholder="Golongan darah"
+            />
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <div class="input_group">
-              <label for="provinsi">Provinsi</label>
-              <select name="provinsi" id="provinsi">
-                <option value="">--Pilih Provinsi--</option>
-                {% for prov in provinsi %}
-                <option kode="{{prov.Kode}}" value="{{prov.Provinsi}}">
-                  Provinsi {{prov.Provinsi}}
-                </option>
-                {% endfor %}
-              </select>
-              <p class="mystatus" id="msg_provinsi"></p>
-            </div>
+        <div class="mb-3">
+          <label for="alamat" class="small text-primary mb-1">Alamat</label>
+          <textarea
+            type="text"
+            class="form-control text-secondary"
+            id="alamat"
+            name="alamat"
+            placeholder="Masukkan alamat"
+          ></textarea>
+        </div>
+
+        <div class="row gx-3">
+          <div class="mb-3 col-6 col-md-2">
+            <label for="rt" class="small text-primary mb-1">RT</label>
+            <input
+              required
+              type="text"
+              class="form-control text-secondary"
+              id="rt"
+              name="rt"
+              placeholder="RT"
+            />
           </div>
-          <div class="col-12 col-sm-6">
-            <div class="input_group">
-              <label for="kabKota">Kab/Kota</label>
-              <select name="kabKota" id="kabKota">
-                <option value="">--Pilih Kab/Kota--</option>
-              </select>
-              <p class="mystatus" id="msg_kabKota"></p>
-            </div>
+          <div class="mb-3 col-6 col-md-2">
+            <label for="rw" class="small text-primary mb-1">RW</label>
+            <input
+              required
+              type="text"
+              class="form-control text-secondary"
+              id="rw"
+              name="rw"
+              placeholder="RW"
+            />
           </div>
+          <div class="mb-3 col-md-8">
+            <label for="provinsi" class="small text-primary mb-1"
+              >Provinsi</label
+            >
+            <select name="provinsi" id="provinsi" class="form-select">
+              <option selected value="">-- Pilih Provinsi --</option>
+              {% for itm in provinsi %}
+              <option value="{{itm.nama}}">{{itm.nama}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="row gx-3">
+          <div class="mb-3 col-md-6">
+            <label for="kabupaten" class="small text-primary mb-1"
+              >Kabupaten</label
+            >
+            <select name="kabupaten" id="kabupaten" class="form-select">
+              <option selected value="">-- Pilih Kabupaten/Kota --</option>
+              <!-- {% for itm in kota %} -->
+              <option value="">{{kota}}</option>
+              <!-- {% endfor %} -->
+            </select>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="kecamatan" class="small text-primary mb-1"
+              >Kecamatan</label
+            >
+            <select name="kecamatan" id="kecamatan" class="form-select">
+              <option selected value="">-- Pilih Kecamatan --</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row gx-3">
+          <div class="mb-3 col-md-6">
+            <label for="kelurahan" class="small text-primary mb-1"
+              >Kelurahan/Desa</label
+            >
+            <select name="kelurahan" id="kelurahan" class="form-select">
+              <option selected value="">-- Pilih Kelurahan/Desa --</option>
+            </select>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="agama" class="small text-primary mb-1">Agama</label>
+            <select name="agama" id="agama" class="form-select">
+              <option selected value="">-- Pilih Agama --</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row gx-3">
+          <div class="mb-3 col-md-6">
+            <label for="statusPerkawinan" class="small text-primary mb-1"
+              >Status Perkawinan</label
+            >
+            <select
+              name="statusPerkawinan"
+              id="statusPerkawinan"
+              class="form-select"
+            >
+              <option selected value="">-- Pilih Status Perkawinan --</option>
+              <option value="Belum Kawin">Belum Kawin</option>
+              <option value="Kawin">Kawin</option>
+              <option value="Cerai Hidup">Cerai Hidup</option>
+              <option value="Cerai Mati">Cerai Mati</option>
+            </select>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="pekerjaan" class="small text-primary mb-1"
+              >Pekerjaan</label
+            >
+            <input
+              required
+              type="text"
+              class="form-control text-secondary"
+              id="pekerjaan"
+              name="pekerjaan"
+              placeholder="Masukkan Pekerjaan"
+            />
+          </div>
+        </div>
+
+        <div class="row gx-3">
+          <div class="mb-3 col-md-6">
+            <label for="ibuKandung" class="small text-primary mb-1"
+              >Nama Ibu Kandung</label
+            >
+            <input
+              required
+              type="text"
+              class="form-control text-secondary"
+              id="ibuKandung"
+              name="ibuKandung"
+              placeholder="Masukkan Nama Ibu Kandung"
+            />
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="telepon" class="small text-primary mb-1">Telepon</label>
+            <input
+              required
+              type="text"
+              class="form-control text-secondary"
+              id="telepon"
+              name="telepon"
+              placeholder="Masukkan No Telepon"
+            />
+          </div>
+        </div>
+        <div class="d-inline-flex">
+          <button class="btn btn-primary" type="submit">Simpan</button>
         </div>
       </form>
     </div>
   </div>
-  <div class="col"></div>
 </div>
-<!-- {% include 'style/datatable.html' %} -->
+
 <script>
   $(document).ready(() => {
-    $("#jenisKelamin").select2();
-    $("#provinsi").select2();
-    $("#kabKota").select2();
-
-    // Handle Provinsi onChange
-    $("#provinsi").on("select2:select", (e) => {
-      // Ambil attribut Kode pada option provinsi
-      const idx = e.currentTarget.selectedIndex; //Index Option yg dipilih
-      const kode = $("#provinsi")[0][idx].getAttribute("Kode");
-      // Request Call Api Kota
-      // alert(kode);
-      $.ajax({
-        url: `/data/kota?provinsi=${kode}`,
-        type: "post",
-        data: { kode: 100 },
-        success: (data) => {
-          console.log(data);
-          // setSelector ke Option kabKota
-          let otKota = $("#kabKota")[0];
-          let kota0 = otKota[0];
-
-          otKota.innerHTML = "";
-          otKota.append(kota0);
-
-          data.forEach((i) => {
-            let o = document.createElement("option");
-            o.innerText = i.Kab + " " + i.Nama;
-            o.setAttribute("value", i.Kode);
-            o.setAttribute("kota", i.Nama);
-            otKota.append(o);
-          });
-        },
-        error: (err) => {
-          console.log(err);
-        },
-      });
+    $("#provinsi").change((e) => {
+      console.log(this.val());
     });
   });
 </script>

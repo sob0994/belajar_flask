@@ -1,8 +1,10 @@
+from pydoc import doc
 from app import app, db
 from flask import render_template, request, redirect, url_for, session, flash, jsonify
 from functools import wraps
 from firebase_admin import firestore
 import pandas as pd
+from app.helpers import useFileImport
 
 # Login Reuired
 
@@ -132,65 +134,102 @@ def register():
 @app.route("/nasabah", methods=["GET", "POST"])
 @uselogin
 def nasabah():
-    provs = db.collection('prov').stream()
+    provs = db.collection('provinsi').order_by(
+        "nama", direction=firestore.Query.ASCENDING).stream()
     prov = []
     for i in provs:
         a = i.to_dict()
         a['id'] = i.id
         prov.append(a)
+    kota = []
+    for i in prov:
+        kota[i['nama']] = i['kabupaten']
 
-    return render_template("page/nasabah.html", provinsi=prov)
+    return render_template("page/nasabah.html", provinsi=prov, kota=kota)
 
 
-@app.route("/data/provinsi", methods=["GET", "POST"])
+@app.route("/data/provinsi", methods=["GET", "POST", "PUT", "DELETE"])
 def dataProvinsi():
-    if request.method == 'post':
-        df = request.form.get('pilih-excel')
-        dr = pd.read_excel(df).to_json
-        return jsonify(dr)
+    mth = request.method
+    if mth == 'PUT':
+        return 'PUT'
 
-    data = (db.collection("prov").order_by(
-        "Provinsi", direction=firestore.Query.ASCENDING).stream())
+    if mth == 'POST':
+        importData = request.args.get('import')
+
+        # Code for Import Data
+        if importData == 'true':
+            # Get file from request File
+            myFile = request.files.get('filePath')
+            # if File doesn't Exist
+            if not myFile:
+                return jsonify({"error": "File diperlukan"})
+            # if File Exist convert to Json/Object
+            myFileData = useFileImport(
+                myFile, ['xls', 'xlsx', 'xlsb', 'csv', 'json'], {'id': str})['data']
+
+            # if File Error
+            if 'error' in myFileData:
+                return jsonify(myFileData)
+            # cek if File is OK to import
+
+            fileOk = False
+            for i in myFileData:
+                if {'id', 'nama'} <= set(i):
+                    fileOk = True
+            # Check File OK
+            if fileOk == False:
+                return jsonify({"error": "Maaf File format tidak sesuai"})
+
+            # Insert into Database Firestore
+            batch = db.batch()
+            # Bath max 500 document
+            for i in myFileData:
+                docID = i['id']
+                dbRef = db.collection('provinsi').document(docID)
+                batch.set(dbRef, {"id": docID, "nama": i['nama']}, merge=True)
+
+            batch.commit()
+
+            return jsonify({'ok': myFileData})
+
+        # Code for Form Input Data
+        else:
+            # Inpur Form Maual
+            return jsonify({'status': 'insert new'})
+
+    if mth == 'DELETE':
+        return 'DELETE'
+
+    data = (db.collection("provinsi").order_by(
+        "nama", direction=firestore.Query.ASCENDING).stream())
     prov = []
     for pr in data:
         p = pr.to_dict()
         p["id"] = pr.id
         prov.append(p)
 
-    return render_template("page/provinsi.html", provinsi=prov)
+    return render_template("page/provinsi.html", provinsi=prov, method=mth)
 
 
 @app.route("/data/provinsi/<uid>")
 @uselogin
 def showProvinsi(uid):
-    ps = db.collection('prov').document(uid)
+    ps = db.collection('provinsi').document(uid)
     provs = ps.get().to_dict()
-    kotas = db.collection('kota').where(
-        'kodeProv', '==', provs['Kode']).stream()
+    # kotas = db.collection('kota').where(
+    #     'kodeProv', '==', provs['Kode']).stream()
     kota = []
-    for i in kotas:
-        kota.append(i.to_dict())
+    # for i in kotas:
+    #     kota.append(i.to_dict())
 
-    jumlahKota = len(kota)
-    ps.update({'jumlahKota': jumlahKota})
+    # jumlahKota = len(kota)
+    # ps.update({'jumlahKota': jumlahKota})
 
     if provs:
         return render_template('page/provinsi_show.html', provs=provs, kota=kota)
 
     return redirect(url_for('dataProvinsi'))
-
-
-@app.route("/importdata/provinsi", methods=["POST"])
-def importProvinsi():
-    if request.method == 'POST':
-        fl = request.files
-        pdr = pd.read_excel(fl['fileExcel'])
-        oks = pdr.to_dict(orient='index')
-        arr = []
-        for oo in oks:
-            arr.append(oks[oo])
-
-        return jsonify(arr)
 
 
 @app.route('/importdata/kota', methods=['POST'])
@@ -286,19 +325,76 @@ def importKota():
         return jsonify({'msg': 'File Sesuai Format', 'data': status})
 
 
-@app.route('/data/kota', methods=['POST'])
+@app.route('/data/kota', methods=['POST', 'GET'])
 @uselogin
 def ambilKota():
-    if request.method == 'POST':
-        # get Request Data
-        kodeProv = request.args.get('provinsi')
-        kota = []
-        dbKota = db.collection('kota')
-        if kodeProv:
-            kts = dbKota.where('kodeProv', '==', kodeProv).stream()
-            for i in kts:
-                p = i.to_dict()
-                p['id'] = i.id
-                kota.append(p)
+    mth = request.method
+    if mth == 'POST':
+        importData = request.args.get("import")
+        # Import Data Logic
+        if importData == 'true':
+            # get file from request file
+            myFile = request.files.get("filePath")
 
-    return jsonify(kota)
+            # if file not exist
+            if not myFile:
+                return jsonify({'error': 'File diperlukan'})
+
+            # if file exist conver to Object/Json
+            myFileData = useFileImport(
+                myFile, ['xls', 'xlsx', 'xlsb', 'csv', 'json'], {'id': str, 'id_provinsi': str})
+            # if File Error
+            if 'error' in myFileData:
+                return jsonify(myFileData)
+            # cek if File is OK to import
+            fileOk = True
+            for i in myFileData['data']:
+                if {'id_provinsi', 'id', 'nama'} <= set(i):
+                    fileOk = True
+
+            # if file is OK
+            if fileOk == False:
+                return jsonify({'error': 'File format salah!'})
+
+            # insert Data into Database
+            batch = db.batch()
+            # Firebase Batch maximum 500 writes per Request
+            setWrites = 200
+            pembagianBulat = len(myFileData['data'])//setWrites
+            cn = 1
+            dataSplit = []
+            nStart = 0
+            nFinish = setWrites
+            # Split into many request
+            while(cn <= pembagianBulat + 1):
+                dataSplit.append(myFileData['data'][nStart:nFinish])
+                cn = cn + 1
+                nStart = nStart + setWrites
+                nFinish = nFinish + setWrites
+            # Insert Splited data into database
+            for i in dataSplit:
+                for a in i:
+                    myRef = db.collection('kota').document(a['id'])
+                    batch.set(myRef, {'id': a['id'], 'id_provinsi':
+                                      a['id_provinsi'], 'nama': a['nama']}, merge=True)
+
+                    provRef = db.collection(
+                        'provinsi').document(a['id_provinsi'])
+                    batch.update(provRef, {'kabupaten': firestore.ArrayUnion(
+                        [{'id': a['id'], 'nama': a['nama']}])})
+
+                batch.commit()
+
+            return jsonify(dataSplit)
+
+        # Input Form Data Logic
+        else:
+            return jsonify("Input Data Required " + importData)
+
+    return jsonify("Detail Kota ditampilkan")
+
+
+@app.route('/data/kota/<idKota>', methods=['POST', 'GET'])
+@uselogin
+def detailKota(idKota):
+    return jsonify(idKota)

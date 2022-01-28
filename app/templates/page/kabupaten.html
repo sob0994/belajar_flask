@@ -11,7 +11,7 @@
 </style>
 
 <div class="by-box mb-5">
-  <div class="card-header bg-primary text-light">List Data Provinsi</div>
+  <div class="card-header bg-primary text-light">List Data Kota</div>
 
   <div class="row justify-content-center py-5 py-xxl-10 mx-2">
     <div class="col-xxl-5 col-xl-8">
@@ -33,7 +33,7 @@
           <tr>
             <td>{{itm.id}}</td>
             <td><a href="/data/provinsi/{{itm.id}}">{{itm.nama}}</a></td>
-            <td style="text-align: center">{{itm.kabupaten|length}}</td>
+            <td style="text-align: center">{{itm.jumlahKota}}</td>
             <td style="text-align: right">
               <a href="/data/provinsi/{{itm.id}}" class="btn btn-sm btn-primary"
                 ><i class="bx bx-pencil"></i
@@ -288,32 +288,38 @@
               errors.pilihFile = ok.error;
               addStatus(errors, "pilihFile", errors.pilihFile);
             } else {
-              errors.pilihFile = "Import data complete!";
-              addStatus(errors, "pilihFile", errors.pilihFile, "success");
+              delete errors.pilihFile;
+              addStatus(errors, "pilihFile", errors.pilihFile);
+              alert("Import Sukses");
             }
             btnImport.removeAttribute("disabled");
             btnImport.innerText = "Import";
           },
           error: (err) => {
-            errors.pilihFile = "Internal Server Error";
-            addStatus(errors, "pilihFile", errors.pilihFile);
             console.log(err);
+            alert("Error bos,, hehe");
           },
         });
       }
     });
   });
   // Function helpers Start=================================================
-  const addStatus = (errors, name, msg, type = "danger") => {
+  const valid = (data) => {
+    let error = {};
+    if (!data.username || data.username === "")
+      error.username = "Username wajib diisi";
+    if (!data.password || data.password === "")
+      error.password = "Password wajib diisi";
+
+    return error;
+  };
+
+  const addStatus = (errors, name, msg) => {
     if (errors?.[name]) {
-      document
-        .getElementById(`msg_${name}`)
-        .classList.add("show", `text-${type}`);
+      document.getElementById(`msg_${name}`).classList.add("show");
       document.getElementById(`msg_${name}`).innerHTML = msg;
     } else {
-      document
-        .getElementById(`msg_${name}`)
-        .classList.remove(`show text-${type}`);
+      document.getElementById(`msg_${name}`).classList.remove("show");
       document.getElementById(`msg_${name}`).innerHTML = "";
     }
   };

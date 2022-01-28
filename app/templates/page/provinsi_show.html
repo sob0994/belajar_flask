@@ -2,36 +2,29 @@
 <style>
   @import url("{{url_for('static',filename='src/css/datatable.css')}}");
 </style>
-<div class="row" style="margin-bottom: 100px">
-  <div class="col-1"></div>
-  <div class="col-12 col-md-8">
-    <div class="row">
-      <div class="col">
-        <h6 class="mysubtitle">Data Provinsi</h6>
-      </div>
-    </div>
-    <div class="row" style="width: 100%; margin: auto">
+<div class="by-box mb-4">
+  <div class="card-header bg-primary text-light">Detail Provinsi</div>
+  <div class="row justify-content-center py-2 py-xxl-4 mx-2">
+    <div class="col-xxl-5 col-xl-8">
       <table class="table" style="width: 100%">
         <tbody>
           <tr>
             <td style="max-width: 150px">Kode Wilayah</td>
             <td>:</td>
-            <td>{{provs['Kode']}}</td>
+            <td>{{provs['id']}}</td>
           </tr>
           <tr>
             <td>Provinsi</td>
             <td>:</td>
-            <td><strong>{{provs['Provinsi']}}</strong></td>
+            <td><strong>{{provs['nama']}}</strong></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="row">
-      <div class="col">
-        <h6 class="mysubtitle">List Data Kabupaten / Kota</h6>
-      </div>
-    </div>
-    <div class="row">
+  </div>
+  <div class="card-header bg-primary text-light">List Kabupaten / Kota</div>
+  <div class="row justify-content-center py-5 py-xxl-10 mx-2">
+    <div class="col-xxl-5 col-xl-8">
       <table
         id="kota"
         class="table table-sm table-striped"
@@ -44,10 +37,10 @@
           </tr>
         </thead>
         <tbody>
-          {% for itm in kota %}
+          {% for itm in provs['kabupaten'] %}
           <tr>
-            <td style="white-space: nowrap">{{itm['Kode']}}</td>
-            <td style="white-space: nowrap">{{itm['Nama']}}</td>
+            <td style="white-space: nowrap">{{itm['id']}}</td>
+            <td style="white-space: nowrap">{{itm['nama']}}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -60,7 +53,6 @@
       </table>
     </div>
   </div>
-  <div class="col"></div>
 </div>
 
 <!-- Modal Start -->
@@ -114,79 +106,83 @@
           aria-labelledby="nav-profile-tab"
         >
           <!-- Tab Pane Import Start -->
-          <form name="form-excel" id="form-excel" class="mt-3">
-            <label for="pilih-excel" class="form-label">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="30"
-                height="30"
-                viewBox="0 0 48 48"
-                style="fill: #000000"
-              >
-                <path
-                  fill="#169154"
-                  d="M29,6H15.744C14.781,6,14,6.781,14,7.744v7.259h15V6z"
-                ></path>
-                <path
-                  fill="#18482a"
-                  d="M14,33.054v7.202C14,41.219,14.781,42,15.743,42H29v-8.946H14z"
-                ></path>
-                <path
-                  fill="#0c8045"
-                  d="M14 15.003H29V24.005000000000003H14z"
-                ></path>
-                <path fill="#17472a" d="M14 24.005H29V33.055H14z"></path>
-                <g>
-                  <path
-                    fill="#29c27f"
-                    d="M42.256,6H29v9.003h15V7.744C44,6.781,43.219,6,42.256,6z"
-                  ></path>
-                  <path
-                    fill="#27663f"
-                    d="M29,33.054V42h13.257C43.219,42,44,41.219,44,40.257v-7.202H29z"
-                  ></path>
-                  <path
-                    fill="#19ac65"
-                    d="M29 15.003H44V24.005000000000003H29z"
-                  ></path>
-                  <path fill="#129652" d="M29 24.005H44V33.055H29z"></path>
-                </g>
-                <path
-                  fill="#0c7238"
-                  d="M22.319,34H5.681C4.753,34,4,33.247,4,32.319V15.681C4,14.753,4.753,14,5.681,14h16.638 C23.247,14,24,14.753,24,15.681v16.638C24,33.247,23.247,34,22.319,34z"
-                ></path>
-                <path
-                  fill="#fff"
-                  d="M9.807 19L12.193 19 14.129 22.754 16.175 19 18.404 19 15.333 24 18.474 29 16.123 29 14.013 25.07 11.912 29 9.526 29 12.719 23.982z"
-                ></path>
-              </svg>
-              Import from Excel / Csv / Json File</label
-            >
-            <input
-              type="file"
-              name="pilihExcel"
-              id="pilihExcel"
-              accept=".xls,.xlsx,.xlsb,.json,.csv"
-              class="form-control form-control-sm"
-            />
-            <p class="status" id="msg_pilihExcel"></p>
-            <button
-              id="btn-pilih-excel"
-              type="submit"
-              class="btn btn-sm btn-warning form-control mt-2"
-            >
-              Import
-            </button>
-          </form>
+          <div class="by-box">
+            <div class="col">
+              <form name="formImport" id="formImport" class="mt-3">
+                <label for="pilihFile" class="form-label">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 48 48"
+                    style="fill: #000000"
+                  >
+                    <path
+                      fill="#169154"
+                      d="M29,6H15.744C14.781,6,14,6.781,14,7.744v7.259h15V6z"
+                    ></path>
+                    <path
+                      fill="#18482a"
+                      d="M14,33.054v7.202C14,41.219,14.781,42,15.743,42H29v-8.946H14z"
+                    ></path>
+                    <path
+                      fill="#0c8045"
+                      d="M14 15.003H29V24.005000000000003H14z"
+                    ></path>
+                    <path fill="#17472a" d="M14 24.005H29V33.055H14z"></path>
+                    <g>
+                      <path
+                        fill="#29c27f"
+                        d="M42.256,6H29v9.003h15V7.744C44,6.781,43.219,6,42.256,6z"
+                      ></path>
+                      <path
+                        fill="#27663f"
+                        d="M29,33.054V42h13.257C43.219,42,44,41.219,44,40.257v-7.202H29z"
+                      ></path>
+                      <path
+                        fill="#19ac65"
+                        d="M29 15.003H44V24.005000000000003H29z"
+                      ></path>
+                      <path fill="#129652" d="M29 24.005H44V33.055H29z"></path>
+                    </g>
+                    <path
+                      fill="#0c7238"
+                      d="M22.319,34H5.681C4.753,34,4,33.247,4,32.319V15.681C4,14.753,4.753,14,5.681,14h16.638 C23.247,14,24,14.753,24,15.681v16.638C24,33.247,23.247,34,22.319,34z"
+                    ></path>
+                    <path
+                      fill="#fff"
+                      d="M9.807 19L12.193 19 14.129 22.754 16.175 19 18.404 19 15.333 24 18.474 29 16.123 29 14.013 25.07 11.912 29 9.526 29 12.719 23.982z"
+                    ></path>
+                  </svg>
+                  Import from Excel / Csv / Json File</label
+                >
+                <input
+                  type="file"
+                  name="pilihFile"
+                  id="pilihFile"
+                  accept=".xls,.xlsx,.xlsb,.json,.csv"
+                  class="form-control form-control-sm"
+                />
+                <p class="status" id="msg_pilihFile"></p>
+                <button
+                  id="btn-pilih-file"
+                  type="submit"
+                  class="btn btn-sm btn-warning form-control mt-2"
+                >
+                  Import
+                </button>
+              </form>
+            </div>
+          </div>
 
           <!-- Tab Pane Import Start -->
         </div>
       </div>
     </div>
     <div class="mymodal-footer grid">
-      <button class="btn btn-sm btn-primary m-1">Save</button>
+      <!-- <button class="btn btn-sm btn-primary m-1">Save</button> -->
       <button class="btn btn-sm btn-secondary m-1" close-modal>close</button>
     </div>
   </div>
@@ -202,62 +198,63 @@
       scrollCollapse: true,
     });
     addDataTableModalButton("kota", "#mymodal", "Tambah");
-    // on Submit Import from Excel
-    $("#form-excel").submit((e) => {
+    // on Submit Import Data
+    $("#formImport").submit((e) => {
       e.preventDefault();
-      let data = new FormData();
-      const file = document.forms["form-excel"]["pilihExcel"];
-      // Validasi Procces
-      let errors = {};
-      const cekFIleSplit = file.value.split(".");
-      const cekkerFlieSplit = file.accept.replaceAll(".", "").split(",");
-      const hasilCek = cekFIleSplit.some((rr) => cekkerFlieSplit.includes(rr));
-      if (!hasilCek) {
-        errors.pilihExcel = "Silahkan pilih file Excel";
-        addStatus(errors, "pilihExcel", errors.pilihExcel);
-      } else {
-        delete errors.pilihExcel;
-        addStatus(errors, "pilihExcel", errors.pilihExcel);
-        // Init data
-        data.append("fileExcel", file.files[0]);
-        // Ajax Request
-        $.ajax({
-          url: "/importdata/kota",
-          type: "post",
-          data: data,
-          processData: false,
-          contentType: false,
-          beforeSend: () => {
-            var bt = document.getElementById("btn-pilih-excel");
-            bt.innerText = "Import on pregres ...";
-            bt.setAttribute("disabled", "true");
-          },
-          complete: () => {
-            var bt = document.getElementById("btn-pilih-excel");
-            bt.innerText = "Import";
-            bt.removeAttribute("disabled");
-          },
-          success: (ok) => {
-            console.log(ok);
-            alert("Import Ok");
-          },
-          error: (err) => {
-            console.log(err);
-            alert("Error bos,, hehe");
-          },
-        });
-      }
-    });
+      // Inittial
+      let dataForm = new FormData();
+      const bt = document.getElementById("btn-pilih-file");
 
-    const addStatus = (errors, name, msg) => {
-      if (errors?.[name]) {
-        document.getElementById(`msg_${name}`).classList.add("show");
-        document.getElementById(`msg_${name}`).innerHTML = msg;
-      } else {
-        document.getElementById(`msg_${name}`).classList.remove("show");
-        document.getElementById(`msg_${name}`).innerHTML = "";
-      }
-    };
+      // Validation
+      let errors = {};
+
+      // fill data form with form input
+      dataForm.append("filePath", $("#pilihFile")[0].files[0]);
+      $.ajax({
+        url: "/data/kota?import=true",
+        type: "post",
+        data: dataForm,
+        processData: false,
+        contentType: false,
+        cache: false,
+        beforeSend: () => {
+          bt.setAttribute("disabled", "true");
+          bt.innerText = "importing data ...";
+        },
+        success: (data) => {
+          bt.removeAttribute("disabled");
+          bt.innerText = "import";
+          if (data?.error) {
+            errors.pilihFile = data.error;
+            addStatus(errors, "pilihFile", errors.pilihFile);
+          } else {
+            errors.pilihFile = "Berhasil Import data";
+            addStatus(errors, "pilihFile", errors.pilihFile, "success");
+          }
+        },
+        error: (err) => {
+          bt.removeAttribute("disabled");
+          bt.innerText = "import";
+          errors.pilihFile = "Terjadi kesalahan !";
+          addStatus(errors, "pilihFile", errors.pilihFile, "success");
+          console.log(err);
+        },
+      });
+    });
   });
+
+  const addStatus = (errors, name, msg, type = "danger") => {
+    if (errors?.[name]) {
+      document
+        .getElementById(`msg_${name}`)
+        .classList.add("show", `text-${type}`);
+      document.getElementById(`msg_${name}`).innerHTML = msg;
+    } else {
+      document
+        .getElementById(`msg_${name}`)
+        .classList.remove(`show text-${type}`);
+      document.getElementById(`msg_${name}`).innerHTML = "";
+    }
+  };
 </script>
 {% endblock %}
