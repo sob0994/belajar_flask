@@ -1,4 +1,3 @@
-from pydoc import doc
 from app import app, db
 from flask import render_template, request, redirect, url_for, session, flash, jsonify
 from functools import wraps
